@@ -58,33 +58,10 @@ body {
     gap: 30px;
     margin-top: 30px;
 }
-
-#infoNome{
-    color: rgb(255, 255, 255);
-    display: flex;
-    height: 30px;
-    width: 400px;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    background-color: #111114;
-}
-#infoData{
-    color: rgb(255, 255, 255);
-    display: flex;
-    height: 30px;
-    width: 400px;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    background-color: #111114;
-}
 #infoMail{
     color: rgb(255, 255, 255);
     display: flex;
-    height: 30px;
+    height: 45px;
     width: 400px;
     padding: 12px;
     border-radius: 8px;
@@ -95,7 +72,7 @@ body {
 #infoSenha{
     color: rgb(255, 255, 255);
     display: flex;
-    height: 30px;
+    height: 45px;
     width: 400px;
     padding: 12px;
     border-radius: 8px;
