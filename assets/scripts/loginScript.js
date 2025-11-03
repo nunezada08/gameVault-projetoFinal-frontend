@@ -1,4 +1,4 @@
-document.getElementById('info').addEventListener('click', function () {
+document.getElementById('btn').addEventListener('click', function () {
     const email = document.getElementById('infoMail').value;
     const senha = document.getElementById('infoSenha').value;
 

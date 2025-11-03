@@ -1,4 +1,4 @@
-document.getElementById('infos').addEventListener('click', function() {
+document.getElementById('btn').addEventListener('click', function() {
 
     const usuario = document.getElementById('infoNome').value;
     const dataNasc = document.getElementById('infoData').value;
@@ -10,6 +10,6 @@ document.getElementById('infos').addEventListener('click', function() {
     localStorage.setItem('senha', senha);
     localStorage.setItem('email', email);
 
-    window.location.href = './login.html'
+    window.location.href = '../pages/login.html'
 
 })
