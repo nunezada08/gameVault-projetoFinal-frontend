@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+}
+
+header {
+    width: 100%;
+    height: 68px;
+    background-color: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+#logoNome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+#logoNome img {
+    margin-top: 5px;
+}
+
+#perfilMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+
+#sunoco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.sunocoText:hover {
+    cursor: pointer;
+
+}
+
+#input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(61, 61, 61);
+    border-radius: 30px;
+    width: 22%;
+    height: 35px;
+}
+
+#input input {
+
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    width: 100%;
+    padding-left: 2px;
+    margin-left: 15px;
+}
+
+#input img {
+    margin-right: 12px;
+    margin-top: 0;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    display: block;
+}
+
+
+#todosOsJogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+#todosOsJogos button {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    border: none;
+    background-color: #292929;
+    cursor: pointer;
+}
+
+
+.games-list {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.game-card {
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    flex: 0 0 300px;
+}
+
+.game-card:focus,
+.game-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.game-image {
+    display: block;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+@media (max-width: 700px) {
+    .game-image { width: 120px; height: 160px; }
+    .games-list { gap: 12px; padding: 12px; }
+}
+
+.game-title {
+    color: #ffffff;
+    text-align: center;
+    padding: 8px 6px;
+    font-size: 0.95rem;
+}
+
+.game-card figure { margin: 0; }
