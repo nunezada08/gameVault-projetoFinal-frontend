@@ -41,33 +41,36 @@ btnFrente.addEventListener("click", () => trocarImagem('frente'));
 btnTras.addEventListener("click", () => trocarImagem('tras'));
 
 
-// Código para o segundo carrossel (Melhores Avaliados)
+
 
 
 const btnTras2 = document.getElementById("btnTras2");
 const btnFrente2 = document.getElementById("btnFrente2");
 const track = document.querySelector(".carousel-track");
 
-// Lista completa de imagens que podem aparecer no carrossel
+
 const allImages2 = [
-    "./assets/images/ghost.png",
-    "./assets/images/tlou.png",
-    "./assets/images/godOfWar.png",
-    "./assets/images/zelda.png",
-    "./assets/images/ocarina.png",
-    "./assets/images/majoras.png",
-    "./assets/images/rdr.png",
-    "./assets/images/eldenRing.png",
-    "./assets/images/gta5.png",
-     // adicione mais caminhos conforme precisar
+    "../assets/images/ghost.png",
+    "../assets/images/tlou.png",
+    "../assets/images/godOfWar.png",
+    "../assets/images/zelda.png",
+    "../assets/images/ocarina.png",
+    "../assets/images/majoras.png",
+    "../assets/images/rdr.png",
+    "../assets/images/eldenRing.png",
+    "../assets/images/gta5.png",
+    "../assets/images/spiderman.png",
+    "../assets/images/gears.png",
+    "../assets/images/cyberpunk.png"
+    
 ];
 
-// Quantas imagens o carrossel mostra ao mesmo tempo (igual ao número inicial de .slide no HTML)
+
 const visibleCount = 3;
 
-let startIndex = 0; // índice da primeira imagem atualmente mostrada
+let startIndex = 0;
 
-// renderiza as imagens visíveis no track (substitui o conteúdo atual)
+
 function renderVisibleSlides() {
     track.innerHTML = "";
     for (let i = 0; i < visibleCount; i++) {
@@ -80,25 +83,95 @@ function renderVisibleSlides() {
     }
 }
 
-// Avança uma imagem: remove a primeira e adiciona a próxima no final
+
 function nextSlide() {
     startIndex = (startIndex + 1) % allImages2.length;
     renderVisibleSlides();
 }
 
-// Volta uma imagem: move o índice para trás e renderiza
+
 function prevSlide() {
     startIndex = (startIndex - 1 + allImages2.length) % allImages2.length;
     renderVisibleSlides();
 }
 
-// iniciar o carrossel com as imagens iniciais
 window.addEventListener("load", () => {
     renderVisibleSlides();
 });
 
-// eventos de clique
+
 btnFrente2.addEventListener("click", nextSlide);
 btnTras2.addEventListener("click", prevSlide);
 
-// ...existing code...
+
+
+
+const btnTras3 = document.getElementById("btnTras3");
+const btnFrente3 = document.getElementById("btnFrente3");
+const trackGenero = document.querySelector(".carousel-track2");
+
+
+const generoImages = [
+    "./assets/images/acao.png",
+    "./assets/images/soulslike.png",
+    "./assets/images/terror.png",
+    "./assets/images/fps.png",
+    "./assets/images/rpg.png",
+    "./assets/images/aventura.png",
+    "./assets/images/realidadeVirtual.png",
+    "./assets/images/mapaAberto.png",
+    "./assets/images/luta.png",
+    "./assets/images/indie.png",
+];
+
+let generoStart = 0;
+let generoVisible = calculateGeneroVisible();
+
+function calculateGeneroVisible() {
+    const w = window.innerWidth;
+    
+    if (w >= 1400) return 5;
+    if (w >= 1200) return 4;
+    if (w >= 900) return 3;
+    if (w >= 600) return 2;
+    return 1;
+}
+
+function renderGeneroSlides() {
+    generoVisible = calculateGeneroVisible();
+    trackGenero.innerHTML = "";
+    for (let i = 0; i < generoVisible; i++) {
+        const idx = (generoStart + i) % generoImages.length;
+        const img = document.createElement("img");
+        img.className = "slideGenero";
+        img.src = generoImages[idx];
+        img.alt = `genero-${idx}`;
+        trackGenero.appendChild(img);
+    }
+}
+
+function nextGenero() {
+    generoStart = (generoStart + 1) % generoImages.length;
+    renderGeneroSlides();
+}
+
+function prevGenero() {
+    generoStart = (generoStart - 1 + generoImages.length) % generoImages.length;
+    renderGeneroSlides();
+}
+
+
+window.addEventListener("load", () => {
+    renderGeneroSlides();
+});
+window.addEventListener("resize", () => {
+   
+    renderGeneroSlides();
+});
+
+btnFrente3.addEventListener("click", nextGenero);
+btnTras3.addEventListener("click", prevGenero);
+
+
+
+
