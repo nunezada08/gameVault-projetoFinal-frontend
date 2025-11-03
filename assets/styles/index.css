@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #111114;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -16,7 +16,7 @@ body {
 
 header {
     width: 100%;
-    height: 68px;
+    height: 72px;
     background-color: #171717;
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #FFFFFF; 
     border-radius: 30px;
     width: 22%;
     height: 35px;
@@ -89,7 +89,7 @@ header {
     margin-top: 80px;
     color: white;
     display: flex;
-    margin-right: 50%;
+    margin-right: 51%;
 }
 
 main {
@@ -108,9 +108,15 @@ main {
     margin-top: 20px;
 }
 
+#banner #imagem {
+    transition: opacity 300ms ease;
+    opacity: 1;
+    will-change: opacity;
+}
+
 #banner button {
-    width: 55px;
-    height: 55px;
+    width: 70px;
+    height: 70px;
     border-radius: 50px;
     border: none;
     background-color: #292929;
@@ -127,4 +133,67 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#banner #imagem {
+    width: 1200px;
+}
+
+#melhorAvaliados {
+    margin-top: 90px;
+    color: white;
+    margin-right: 70%;
+    
+}
+
+#melhorAvaliadosJogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+#btnFrente2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnTras2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#melhorAvaliadosJogos button {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    border: none;
+    background-color: #292929;
+    cursor: pointer;
+}
+
+#melhorAvaliadosJogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+}
+.carousel-track {
+    display: flex;
+    gap: 50px;
+    transition: transform 200ms ease;
+    will-change: transform;
+}
+.slide {
+    object-fit: cover;
+    border-radius: 12px;
+    flex: 0 0 auto;
 }
