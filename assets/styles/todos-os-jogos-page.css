@@ -7,11 +7,11 @@
 }
 
 body {
-    background-color: black;
+    background-color: #111114;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    
+
 }
 
 header {
@@ -22,13 +22,15 @@ header {
     align-items: center;
     justify-content: space-between;
     color: rgb(255, 255, 255);
+    padding: 0 5%;
+    gap: 24px;
 }
 
 #logoNome {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-left: 120px;
+    margin-left: 0;
     font-size: 12px;
 }
 
@@ -41,7 +43,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    margin-right: 140px;
+    margin-right: 0;
 }
 
 
@@ -50,7 +52,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 50px;
-    margin-left: 150px;
+    margin-left: 0;
 }
 
 .sunocoText:hover {
@@ -62,11 +64,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: #111114;
     border-radius: 30px;
-    width: 15%;
+    width: 100%;
+    max-width: 320px;
     height: 35px;
-    margin-left: 00px;
+    margin-left: 0;
 }
 
 #input input {
@@ -89,13 +92,13 @@ header {
     display: block;
 }
 
-
 #todosOsJogos {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 40px;
     margin-top: 20px;
+    padding: 0 10%;
 }
 
 #todosOsJogos button {
@@ -107,6 +110,14 @@ header {
     cursor: pointer;
 }
 
+.todos-jogos{
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin: 20px 0 0 0;
+    text-align: left;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
 
 .games-list {
     display: flex;
@@ -128,18 +139,13 @@ header {
 .game-card:focus,
 .game-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 20px #131316;
 }
 
 .game-image {
     display: block;
     width: 100%;
     object-fit: cover;
-}
-
-@media (max-width: 700px) {
-    .game-image { width: 120px; height: 160px; }
-    .games-list { gap: 12px; padding: 12px; }
 }
 
 .game-title {
@@ -150,12 +156,3 @@ header {
 }
 
 .game-card figure { margin: 0; }
-
-.todos-jogos{
-    font-family: 'Inter', sans-serif;
-    color: white;
-    margin-right: 165vh;
-    margin-top: 50px;
-    font-weight: 300;
-    font-size: 1.2rem;
-}
