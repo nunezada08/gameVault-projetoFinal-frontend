@@ -103,6 +103,8 @@ body {
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    background-color: white;
+    text-decoration: none;
 }
 #btn:hover{
     background-color: rgb(76, 180, 76);
@@ -120,6 +122,8 @@ body {
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    background-color: white;
+    text-decoration: none;
 }
 #btnVoltar:hover{
     background-color: rgb(180, 76, 76);
