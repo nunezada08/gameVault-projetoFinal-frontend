@@ -6,6 +6,11 @@ document.getElementById('btns').addEventListener('click', function() {
     localStorage.setItem('senha', senha);
     localStorage.setItem('email', email);
 
-    window.location.href = './login.html'
+    if (email === undefined || senha === undefined){
+        alert('Por favor, preencha todos os campos!');
+        return;
+    } else {
+        window.location.href = './login.html'
+    }
 
 })
