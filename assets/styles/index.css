@@ -16,12 +16,13 @@ body {
 
 header {
     width: 100%;
-    height: 72px;
+    height: 68px;
     background-color: #171717;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: white;
+    color: rgb(255, 255, 255);
+    padding: 0 3%;
 }
 
 #logoNome {
@@ -59,7 +60,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FFFFFF; 
+    background-color: #111114; 
     border-radius: 30px;
     width: 22%;
     height: 35px;
@@ -74,6 +75,7 @@ header {
     width: 100%;
     padding-left: 2px;
     margin-left: 15px;
+    color: white;
 }
 
 #input img {
@@ -150,6 +152,11 @@ main {
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+    height: 230px;
+    border-bottom: 2px solid rgba(255,255,255,0.06);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-bottom: 40px;
 }
 
 #btnFrente2 {
@@ -188,8 +195,6 @@ main {
     height: auto;
 }
 
------------------------------------------
-
 #btnFrente3 {
     display: flex;
     align-items: center;
@@ -206,6 +211,7 @@ main {
     margin-top: 90px;
     color: white;
     margin-right: 62%;
+    
     
 }
 
@@ -242,15 +248,22 @@ main {
     object-fit: cover;
     height: auto;
     border-radius: 40px;
+    
 }
 
 #divFiltroJogos {
     width: 100%;
-    height: 150px;
+    margin-top: 20px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    border-bottom: 2px solid rgba(255,255,255,0.06);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-bottom: 40px;
+    
 }
 
 .filtrosJogos {
@@ -263,6 +276,138 @@ main {
     background-color: #0783D6;
     color: #FFFFFF;
     font-size: 11px;
+    
+}
+
+#avaliacoes {
+    margin-top: 90px;
+    color: white;
+    margin-right: 62%;
+}
+
+#divAvaliacoes {
+    width: 88.5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 800px;
+    gap: 40px;
+    border-bottom: 2px solid rgba(255,255,255,0.06);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+}
+
+.avalicao-user {
+    width: 90%;
+    height: 220px;
+    background-color: #171717;
+    border-radius: 40px;
+
+}
+
+.quaseHeader {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nomeJogo {
+    color: white;
+    display: flex;
+    gap: 20px;
+}
+
+.nomeJogo img {
+    margin-left: 20px;
+}
+
+.estrelasAvaliacao {
+    margin-right: 20px;
+}
+
+.textoAvaliacao {
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.likeDeslike {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.likeDeslike img {
+    margin-right: 20px;
+}
+
+#plataformas {
+    margin-top: 90px;
+    color: white;
+    margin-right: 45%;
+}
+
+#plataformasImagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 87%;
+    height: 550px;
+    gap: 30px;
+    border-bottom: 2px solid rgba(255,255,255,0.06);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.imagensPlataformas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #171717;
+}
+
+#secoes {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+#senai {
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#textosFinais {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 /* Media queries para notebooks e dispositivos móveis */
