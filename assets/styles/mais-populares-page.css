@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111114;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+}
+
+header {
+    width: 100%;
+    height: 68px;
+    background-color: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    padding: 0 3%;
+}
+
+#logoNome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+#logoNome img {
+    margin-top: 5px;
+}
+
+#perfilMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+#sunoco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.sunocoText:hover {
+    cursor: pointer;
+
+}
+
+#input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111114; 
+    border-radius: 30px;
+    width: 22%;
+    height: 35px;
+}
+
+#input input {
+
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    width: 100%;
+    padding-left: 2px;
+    margin-left: 15px;
+    color: white;
+}
+
+#input img {
+    margin-right: 15px;
+}
+
+#imagem {
+    border-radius: 30px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#jogosEmAlta {
+    margin-top: 80px;
+    color: white;
+    display: flex;
+    margin-right: 50%;
+}
+
+#jogosEmAlta h1 {
+    display: flex;
+    text-align: center;
+    margin-left: 130px;
+}
+
+#battlefield {
+    border-radius: 30px;
+    width: 80%;
+}
+
+#imagem {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.imagens{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    
+}
+
+
+
+#eldenRing{
+      width: 45%;
+      height: 300px;
+      margin: 40px;
+    border-radius: 35px;
+}
+
+#death-stranding-2-mini{
+    width: 30%;
+    height: 300px;
+    margin: 30px;
+    border-radius: 35px;
+}
+
+.mini{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.mini img{
+    height: 170px;
+   margin: 30px;
+}
+
+#silksong-mini{
+    border-radius: 30px;
+}
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #171717;
+}
+
+#secoes {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+#senai {
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#textosFinais {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
