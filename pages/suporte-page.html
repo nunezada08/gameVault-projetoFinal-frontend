@@ -1,4 +1,4 @@
-suporte.html: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -10,28 +10,34 @@ suporte.html: <!DOCTYPE html>
 <body>
     <header>
         <div id="logoNome">
-            <a href="../index.html" aria-label="Início"><img src="../assets/images/logo.png" alt="Logo" width="90px"></a>
-            <h1><a href="../index.html" aria-label="Início">GAME VAULT</a></h1>
+            <img src="../assets/images/logo.png" alt="Logo" width="90px">
+            <h1>GAME VAULT</h1>
         </div>
 
-        <nav id="sunoco">
-            <a class="sunocoText" href="suporte.html">Suporte</a>
-            <a class="sunocoText" href="novidades-page.html">Novidades</a>
-            <a class="sunocoText" href="todos-os-jogos-page.html">Consoles</a>
-            <a class="sunocoText" href="todos-os-jogos-page.html">Todos os jogos</a>
-        </nav>
+        <div id="sunoco">
+            <p class="sunocoText">Suporte</p>
+            <p class="sunocoText">Novidades</p>
+            <p class="sunocoText">Consoles</p>
+            <p class="sunocoText">Todos os jogos</p>
+        </div>
 
-        <!-- campo de busca (lado direito, ao lado do perfil) -->
         <div id="input">
             <input type="text" placeholder="Pesquisa">
-            <img src="../assets/images/lupa.png" alt="Lupa" width="20px">
+            <img src="../assets/images/lupa_nova.png" alt="Lupa">
         </div>
 
         <div id="perfilMenu">
-            <a href="login.html" aria-label="Entrar"><img src="../assets/images/perfilFoto.png" alt="Perfil" width="35px"></a>
-            <a href="#" aria-label="Menu"><img src="../assets/images/menu.png" alt="Menu" width="25px"></a>
+            <a href="login.html"><img src="../assets/images/perfilFoto.png" alt="Perfil" width="35px"></a>
+            <img src="../assets/images/menu.png" alt="Menu" width="25px" id="menuIcon">
         </div>
     </header>
+
+    <nav id="mobileMenu">
+        <a href="#">Suporte</a>
+        <a href="#">Novidades</a>
+        <a href="#">Consoles</a>
+        <a href="#">Todos os jogos</a>
+    </nav>
 
     <main>
         <div class="container">
@@ -43,10 +49,10 @@ suporte.html: <!DOCTYPE html>
                 <div class="service-inner">
                     <h2>Autoatendimento</h2>
                     <div class="service-grid">
-                        <button class="service-btn purple">Esqueci a senha do e-mail</button>
-                        <button class="service-btn brown">Não encontrei um jogo</button>
-                        <button class="service-btn teal">Controle Parental</button>
-                        <button class="service-btn green">Sem Acesso a uma Página</button>
+                        <div class="service-btn purple">Esqueci a senha do e-mail</div>
+                        <div class="service-btn brown">Não encontrei um jogo</div>
+                        <div class="service-btn teal">Controle Parental</div>
+                        <div class="service-btn green">Sem Acesso a uma Página</div>
                     </div>
                 </div>
             </section>
@@ -54,10 +60,15 @@ suporte.html: <!DOCTYPE html>
             <section class="contact">
                 <h2>Entre em Contato</h2>
                 <div class="contact-icons">
-                    <a href="#" aria-label="Gmail"><img src="../assets/images/Gmail.png" alt="Gmail"></a>
-                    <a href="#" aria-label="WhatsApp" class="whatsapp-link">
-                       
-                    <a href="#" aria-label="Instagram"><img src="../assets/images/instagram.jpg" alt="Instagram"></a>
+                    <a aria-label="E-mail" title="Enviar e-mail para o suporte">
+                        <img src="../assets/images/email.png" alt="E-mail do suporte">
+                    </a>
+                    <a aria-label="WhatsApp" title="Abrir WhatsApp" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/zap.png" alt="WhatsApp do suporte">
+                    </a>
+                    <a aria-label="Instagram" title="Abrir Instagram" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/images/instagram.png" alt="Instagram do GameVault">
+                    </a>
                 </div>
             </section>
         </div>
@@ -75,9 +86,9 @@ suporte.html: <!DOCTYPE html>
         </div>
 
         <div id="senai">
-            <img src="../assets/images/brasil.png" alt="Brasil">
-            <img src="../assets/images/senai.png" alt="SENAI">
-            <img src="../assets/images/sesi.png" alt="SESI">
+            <img src="../assets/images/brasil.png" alt="">
+            <img src="../assets/images/senai.png" alt="">
+            <img src="../assets/images/sesi.png" alt="">
         </div>
 
         <div id="textosFinais">
@@ -85,5 +96,6 @@ suporte.html: <!DOCTYPE html>
             <p>© 2025 Zytrix. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script src="../assets/scripts/suporte-page.js"></script>
 </body>
 </html>
