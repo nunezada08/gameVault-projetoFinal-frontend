@@ -87,43 +87,19 @@ body {
 #btns{
     margin-top: 40px;
     display: flex;
-    justify-content: space-around;
-    width: 800px;
     align-items: center;
-}
-#btn{
-    background-color: white;
-    display: flex;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.386);
     padding: 10px;
     border: none;
     border-radius: 25px;
     width: 80px;
     justify-content: center;
-    align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
 }
-#btn:hover{
-    background-color: rgb(76, 180, 76);
-    transition: all 0.2s ease;
-}
-
-
-#btnVoltar{
-    background-color: white;
-    display: flex;
-    padding: 10px;
-    border: none;
-    border-radius: 25px;
-    width: 80px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-#btnVoltar:hover{
-    background-color: rgb(180, 76, 76);
-    transition: all 0.2s ease;
+#btns:hover{
+    background-color: rgba(255, 255, 255, 0.205);
+    transform: scale(1.05);
 }
