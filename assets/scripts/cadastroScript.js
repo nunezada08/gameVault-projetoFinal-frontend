@@ -6,7 +6,7 @@ document.getElementById('btns').addEventListener('click', function() {
     localStorage.setItem('senha', senha);
     localStorage.setItem('email', email);
 
-    if (email === undefined || senha === undefined){
+    if (email === null || senha === null){
         alert('Por favor, preencha todos os campos!');
         return;
     } else {

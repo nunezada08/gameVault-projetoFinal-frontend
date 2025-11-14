@@ -51,10 +51,15 @@ header {
     gap: 50px;
 }
 
-.sunocoText:hover {
-    cursor: pointer;
-
+.sunocoText {
+  color: white;
+  text-decoration: none;
 }
+.sunocoText:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 
 #input {
     display: flex;
