@@ -9,7 +9,6 @@ async function carregarAvaliacoes() {
 
         const avaliacoes = dados.avaliacoes;
 
-        // 🔥 Mostrar apenas 3 avaliações
         mostrarAvaliacoes(avaliacoes.slice(0, 3));
 
     } catch (error) {
