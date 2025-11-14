@@ -56,7 +56,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 8px;
 }
 
 #infoNome{
@@ -64,7 +64,7 @@ body {
     display: flex;
     height: 30px;
     width: 400px;
-    padding: 12px;
+    padding: 20px;
     border-radius: 8px;
     cursor: pointer;
     border: none;
@@ -75,7 +75,7 @@ body {
     display: flex;
     height: 30px;
     width: 400px;
-    padding: 12px;
+    padding: 20px;
     border-radius: 8px;
     cursor: pointer;
     border: none;
@@ -86,7 +86,7 @@ body {
     display: flex;
     height: 30px;
     width: 400px;
-    padding: 12px;
+    padding: 20px;
     border-radius: 8px;
     cursor: pointer;
     border: none;
@@ -97,7 +97,7 @@ body {
     display: flex;
     height: 30px;
     width: 400px;
-    padding: 12px;
+    padding: 20px;
     border-radius: 8px;
     cursor: pointer;
     border: none;
