@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111114;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 68px;
+    background-color: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    gap: 24px;
+}
+
+#logoNome {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+#sunoco {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#input {
+    display: flex;
+    align-items: center;
+    background-color: #111114;
+    border-radius: 30px;
+    max-width: 320px;
+    height: 35px;
+    padding: 0 10px;
+}
+
+#input input {
+    color: rgb(154, 156, 162);
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+}
+
+#input img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+#perfilMenu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#lancamentos {
+    margin-bottom: 20px;
+}
+
+.lancamentos {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.game-image {
+    width: 900px; 
+    height: auto; 
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+.game-info {
+    background-color: #1c1c1e;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    width: 900px; 
+    max-width: none; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.game-description {
+    margin-top: 15px;
+}
+
+.game-description p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.platforms {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.platform-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.platform-icon:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #171717;
+    margin-top: 40px;
+}
+
+#secoes {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+#senai {
+    width: 100%;
+    height: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+}
+
+#textosFinais {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
