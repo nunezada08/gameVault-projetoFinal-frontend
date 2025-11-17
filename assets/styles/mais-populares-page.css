@@ -1,54 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #111114;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    
+  background-color: #111114;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 header {
-    width: 100%;
-    height: 68px;
-    background-color: #171717;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: rgb(255, 255, 255);
-    padding: 0 3%;
+  width: 100%;
+  height: 68px;
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+  padding: 0 3%;
 }
 
 #logoNome {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
 }
 
 #logoNome img {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 #perfilMenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-right: 20px;
 }
 
 #sunoco {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 .sunocoText {
@@ -60,132 +59,521 @@ header {
   text-decoration: underline;
 }
 
-
 #input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #111114; 
-    border-radius: 30px;
-    width: 22%;
-    height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111114;
+  border-radius: 30px;
+  width: 22%;
+  height: 35px;
 }
 
 #input input {
-
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 1rem;
-    width: 100%;
-    padding-left: 2px;
-    margin-left: 15px;
-    color: white;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  width: 100%;
+  padding-left: 2px;
+  margin-left: 15px;
+  color: white;
 }
 
 #input img {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 #imagem {
-    border-radius: 30px;
-    display: block;
-    max-width: 100%;
-    height: auto;
+  border-radius: 40px;
+  display: block;
+  max-width: 85%;
+  height: auto;
 }
 
-#jogosEmAlta {
-    margin-top: 80px;
-    color: white;
-    display: flex;
-    margin-right: 50%;
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
 }
 
-#jogosEmAlta h1 {
-    display: flex;
-    text-align: center;
-    margin-left: 130px;
+#banner #imagem {
+  transition: opacity 300ms ease;
+  opacity: 1;
+  will-change: opacity;
+  max-width: 85%;
+  height: 900px;
+}
+
+#banner button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  border: none;
+  background-color: #292929;
+  cursor: pointer;
+}
+
+#btnFrente {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#btnTras {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#maisPopulares {
+  margin-top: 80px;
+  color: white;
+  display: flex;
+  margin-right: 50%;
+}
+
+#maisPopulares h1 {
+  display: flex;
+  text-align: center;
+  margin-left: 130px;
 }
 
 #battlefield {
-    border-radius: 30px;
-    width: 80%;
+  border-radius: 30px;
+  width: 80%;
 }
 
 #imagem {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
-.imagens{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    
-}
-
-
-
-#eldenRing{
-      width: 45%;
-      height: 300px;
-      margin: 40px;
-    border-radius: 35px;
+.imagens {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-#death-stranding-2-mini{
-    width: 30%;
-    height: 300px;
-    margin: 30px;
-    border-radius: 35px;
+.imagens .caption {
+  color: #ffffff;
+  margin-top: 8px;
+  font-size: 17px;
+  text-align: center;
+  
 }
 
-.mini{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-.mini img{
-    height: 170px;
-   margin: 30px;
+.imagens img {
+  height: 250px;
+  margin: 60px;
 }
 
-#silksong-mini{
-    border-radius: 30px;
+#recomendacoes{
+  margin-top: 80px;
+  color: white;
+  display: flex;
+  margin-right: 50%;
+}
+
+#recomendacoes h1 {
+  display: flex;
+  text-align: center;
+  margin-left: 130px;
+}
+
+#eldenRing {
+  border-radius: 30px;
+  height: 250px;
+}
+
+#death-stranding-2-mini {
+  border-radius: 30px;
+  height: 250px;
+}
+#red-dead-redemption-2 {
+  border-radius: 30px;
+  height: 250px;
+}
+.mini {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.mini img {
+  height: 170px;
+  margin: 60px;
+}
+
+#silksong-mini {
+  border-radius: 30px;
+  height: 250px;
+}
+#astro-bot-mini {
+  border-radius: 30px;
+  height: 250px;
+}
+#doom {
+  border-radius: 30px;
+  height: 250px;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mini img {
+  border-radius: 12px;
+  display: block;
+}
+.jogos:hover {
+  cursor: pointer;
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+  transition: all ease ;
+}
+.mini .caption {
+  color: #ffffff;
+  margin-top: 8px;
+  font-size: 17px;
+  text-align: center;
 }
 footer {
-    width: 100%;
-    height: 80px;
-    background-color: #171717;
+  width: 100%;
+  height: 80px;
+  background-color: #171717;
+  margin-top: 5%;
+}
+#inicio {
+  color: white;
+  text-decoration: none;
 }
 
 #secoes {
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: white;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
 }
 
 #senai {
-    width: 100%;
-    height: 30px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+  width: 100%;
+  height: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 #textosFinais {
-    color: white;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* Responsivo para tablets (1024px - 1366px) */
+@media (max-width: 1366px) {
+  #sunoco {
+    gap: 40px;
+  }
+  #input {
+    width: 25%;
+  }
+  #battlefield {
+    width: 90%;
+  }
+  #eldenRing {
+    width: 50%;
+    height: 280px;
+  }
+  #death-stranding-2-mini {
+    width: 35%;
+    height: 280px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 0 2%;
+  }
+  #logoNome h1 {
+    font-size: 12px;
+  }
+  #logoNome img {
+    width: 70px;
+  }
+  #sunoco {
+    gap: 30px;
+    font-size: 13px;
+  }
+  #input {
+    width: 35%;
+  }
+  #perfilMenu {
+    gap: 20px;
+  }
+  #perfilMenu img {
+    width: 30px;
+  }
+  #jogosEmAlta {
+    margin-left: 5%;
+    margin-top: 30px;
+  }
+  #jogosEmAlta h1 {
+    margin-left: 0;
+  }
+  #battlefield {
+    width: 85%;
+  }
+  .imagens {
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  #eldenRing {
+    width: 45%;
+    height: 260px;
+    margin: 20px;
+  }
+  #death-stranding-2-mini {
+    width: 40%;
+    height: 260px;
+    margin: 20px;
+  }
+  .mini {
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .mini img {
+    height: 150px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 60px;
+    padding: 0 3%;
+  }
+  #logoNome {
+    gap: 10px;
+  }
+  #logoNome h1 {
+    font-size: 11px;
+  }
+  #logoNome img {
+    width: 50px;
+  }
+  #sunoco {
+    gap: 20px;
+    font-size: 12px;
+  }
+  #input {
+    width: 40%;
+    height: 32px;
+  }
+  #perfilMenu {
+    gap: 15px;
+    margin-right: 10px;
+  }
+  #perfilMenu img {
+    width: 26px;
+  }
+  #jogosEmAlta {
+    margin-left: 3%;
+    margin-top: 25px;
+    font-size: 16px;
+  }
+  #jogosEmAlta h1 {
+    font-size: 18px;
+    margin-left: 0;
+  }
+  #imagem {
+    margin-top: 20px;
+  }
+  #battlefield {
+    width: 90%;
+    border-radius: 20px;
+  }
+  .imagens {
     flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+  }
+  #eldenRing {
+    width: 85%;
+    height: 240px;
+    margin: 15px 0;
+  }
+  #death-stranding-2-mini {
+    width: 85%;
+    height: 240px;
+    margin: 15px 0;
+  }
+  .mini {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .mini img {
+    width: 85%;
+    height: auto;
+    max-height: 150px;
+    margin: 10px 0;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+  header {
+    height: 55px;
+    padding: 0 2%;
+  }
+  #logoNome {
+    gap: 8px;
+  }
+  #logoNome h1 {
+    font-size: 10px;
+  }
+  #logoNome img {
+    width: 40px;
+  }
+  #sunoco {
+    display: none;
+  }
+  #input {
+    width: 50%;
+    height: 30px;
+  }
+  #input input {
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+  #input img {
+    width: 20px;
+    margin-right: 10px;
+  }
+  #perfilMenu {
+    gap: 12px;
+    margin-right: 5px;
+  }
+  #perfilMenu img {
+    width: 22px;
+  }
+  #jogosEmAlta {
+    margin-left: 5%;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  #jogosEmAlta h1 {
+    font-size: 16px;
+    margin-left: 0;
+  }
+  #imagem {
+    margin-top: 15px;
+  }
+  #battlefield {
+    width: 95%;
+    border-radius: 15px;
+  }
+  .imagens {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+  #eldenRing {
+    width: 90%;
+    height: 200px;
+    margin: 0;
+    border-radius: 20px;
+  }
+  #death-stranding-2-mini {
+    width: 90%;
+    height: 200px;
+    margin: 0;
+    border-radius: 20px;
+  }
+  .mini {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  .mini img {
+    width: 90%;
+    height: auto;
+    max-height: 130px;
+    margin: 0;
+    border-radius: 15px;
+  }
+  footer {
+    height: 70px;
+    margin-top: 20px;
+  }
+  #secoes {
+    gap: 5px;
+    font-size: 12px;
+  }
+  #senai {
+    gap: 10px;
+  }
+  #senai img {
+    width: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+  header {
+    height: 50px;
+  }
+  #logoNome img {
+    width: 35px;
+  }
+  #logoNome h1 {
+    font-size: 9px;
+  }
+  #input {
+    width: 55%;
+  }
+  #jogosEmAlta {
+    font-size: 12px;
+    margin-left: 3%;
+  }
+  #jogosEmAlta h1 {
+    font-size: 14px;
+  }
+  #battlefield {
+    width: 97%;
+  }
+  #eldenRing {
+    width: 95%;
+    height: 180px;
+  }
+  #death-stranding-2-mini {
+    width: 95%;
+    height: 180px;
+  }
+  .mini img {
+    width: 95%;
+    height: auto;
+    max-height: 120px;
+  }
 }
