@@ -100,6 +100,12 @@ header {
   align-items: center;
   margin-top: 10px;
 }
+.game-card:hover{
+  cursor: pointer;
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+  transition: all ease ;
+}
 #ghost-of-tsushima-mini {
   width: 80%;
   margin: 30px;
@@ -158,7 +164,6 @@ header {
   margin: 30px;
 }
 
-/* Simple game card and caption */
 .game-card{
   display: flex;
   flex-direction: column;
@@ -218,4 +223,84 @@ footer {
   justify-content: center;
   text-align: center;
   flex-direction: column;
+}
+
+/* Responsivo para tablets (1024px - 1366px) */
+@media (max-width: 1366px) {
+  #sunoco { gap: 40px; }
+  #input { width: 25%; }
+}
+
+@media (max-width: 1024px) {
+  header { padding: 0 2%; }
+  #logoNome h1 { font-size: 12px; }
+  #logoNome img { width: 70px; }
+  #sunoco { gap: 30px; font-size: 13px; }
+  #input { width: 35%; }
+  #perfilMenu { gap: 20px; }
+  #perfilMenu img { width: 30px; }
+  #jogosEmAlta { margin-left: 5%; margin-top: 30px; }
+  .jogos { flex-wrap: wrap; }
+  .game-card img { width: 200px; height: 280px; }
+}
+
+@media (max-width: 768px) {
+  header { height: 60px; padding: 0 3%; }
+  #logoNome { gap: 10px; }
+  #logoNome h1 { font-size: 11px; }
+  #logoNome img { width: 50px; }
+  #sunoco { gap: 20px; font-size: 12px; }
+  #input { width: 40%; height: 32px; }
+  #perfilMenu { gap: 15px; margin-right: 10px; }
+  #perfilMenu img { width: 26px; }
+  #jogosEmAlta { margin-left: 3%; margin-top: 25px; }
+  .jogos { flex-direction: column; gap: 20px; }
+  .jogos-2 { flex-direction: column; gap: 20px; }
+  .jogos-3 { flex-direction: column; gap: 20px; }
+  .jogos-4 { flex-direction: column; gap: 20px; }
+  .game-card img { width: 180px; height: 250px; }
+  .game-card .caption { font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 13px; }
+  header { height: 55px; padding: 0 2%; }
+  #logoNome { gap: 8px; }
+  #logoNome h1 { font-size: 10px; }
+  #logoNome img { width: 40px; }
+  #sunoco { display: none; }
+  #input { width: 50%; height: 30px; }
+  #input input { font-size: 0.9rem; margin-left: 10px; }
+  #input img { width: 20px; margin-right: 10px; }
+  #perfilMenu { gap: 12px; margin-right: 5px; }
+  #perfilMenu img { width: 22px; }
+  #jogosEmAlta { margin-left: 5%; margin-top: 20px; font-size: 16px; }
+  #jogosEmAlta h1 { font-size: 18px; }
+  .jogos { flex-direction: column; gap: 15px; margin-top: 5px; }
+  .jogos-2 { flex-direction: column; gap: 15px; margin-top: 5px; }
+  .jogos-3 { flex-direction: column; gap: 15px; margin-top: 5px; }
+  .jogos-4 { flex-direction: column; gap: 15px; margin-top: 5px; }
+  #ghost-of-tsushima-mini { width: 90%; margin: 15px; }
+  #horizon-forbidden-west-mini { width: 90%; margin: 15px; }
+  #until-dawn-2-mini { width: 90%; margin: 15px; }
+  #days-gone-mini { width: 90%; margin: 15px; }
+  #spider-man-2-mini { width: 90%; margin: 15px; }
+  #detroit-become-human-mini { width: 90%; margin: 15px; }
+  #demon-souls-mini { width: 90%; margin: 15px; }
+  #stellar-blade-mini { width: 90%; margin: 15px; }
+  .game-card img { width: 140px; height: 200px; }
+  .game-card .caption { font-size: 11px; }
+  footer { height: 70px; margin-top: 20px; }
+}
+
+@media (max-width: 375px) {
+  body { font-size: 12px; }
+  header { height: 50px; }
+  #logoNome img { width: 35px; }
+  #logoNome h1 { font-size: 9px; }
+  #input { width: 55%; }
+  #jogosEmAlta { font-size: 14px; }
+  #jogosEmAlta h1 { font-size: 16px; }
+  .game-card img { width: 120px; height: 170px; }
+  .game-card .caption { font-size: 10px; margin-top: 5px; }
 }
