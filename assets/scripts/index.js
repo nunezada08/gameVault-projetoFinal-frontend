@@ -1,10 +1,12 @@
-const API = "http://localhost:3001/avaliacoes";
+const APIAv = "http://localhost:3001/avaliacoes";
+const APIJg = "http://localhost:3001/jogos";
+
 
 const divAvaliacoes = document.getElementById("divAvaliacoes");
 
 async function carregarAvaliacoes() {
     try {
-        const resposta = await fetch(API);
+        const resposta = await fetch(APIAv);
         const dados = await resposta.json();
 
         const avaliacoes = dados.avaliacoes;
@@ -57,7 +59,7 @@ function mostrarAvaliacoes(lista) {
 
 function gerarEstrelas(nota) {
     const estrelas = Math.round(nota / 2);
-    return "⭐".repeat(estrelas) + "".repeat(5 - estrelas);
+    return "⭐".repeat(estrelas) + "☆".repeat(5 - estrelas);
 }
 
 
@@ -67,9 +69,91 @@ function gerarEstrelas(nota) {
 
 
 
+const carouselViewport = document.querySelector(".carousel-viewport");
+
+let jogos = [];
+
+async function carregarJogos() {
+    try {
+        const resposta = await fetch(APIJg);
+        const dados = await resposta.json();
+
+        // aceita array direto ou objeto { jogos: [...] }
+        if (Array.isArray(dados)) {
+            jogos = dados;
+        } else if (Array.isArray(dados.jogos)) {
+            jogos = dados.jogos;
+        } else {
+            jogos = [];
+        }
+
+        mostrarJogos(jogos.slice(0, 3));
+        
+    } catch (error) {
+
+        console.error("Erro ao carregar jogos:", error)
+        if (carouselViewport) carouselViewport.innerHTML = "<p>Erro ao carregar jogos.</p>";
+    }
+}
+
+carregarJogos();
+
+function mostrarJogos(lista) {
+    if (!carouselViewport) return;
+    carouselViewport.innerHTML = "";
+
+    if (!Array.isArray(lista) || lista.length === 0) {
+        carouselViewport.innerHTML = "<p>Nenhum jogo para mostrar.</p>";
+        return;
+    }
+
+    let gamesContainer = carouselViewport.querySelector('.api-games');
+    if (!gamesContainer) {
+        gamesContainer = document.createElement('div');
+        gamesContainer.className = 'api-games';
+        carouselViewport.appendChild(gamesContainer);
+    }
+
+    gamesContainer.innerHTML = '';
+
+    if (!Array.isArray(lista) || lista.length === 0) {
+        gamesContainer.innerHTML = '<p>Nenhum jogo para mostrar.</p>';
+        return;
+    }
 
 
+    const track = document.createElement('div');
+    track.className = 'carousel-track';
 
+    lista.forEach(jg => {
+        const slideWrap = document.createElement('div');
+        slideWrap.className = 'slide-cardDiv';
+
+        slideWrap.innerHTML = `
+            <figure class="slide-card">     
+                <figcaption class="game-title">${jg.nome || "Jogo não informado"}</figcaption>
+            </figure>
+        `;
+
+        track.appendChild(slideWrap);
+    });
+
+    gamesContainer.appendChild(track);
+}
+
+
+function mostrarDetalhes(jogos) {
+    detalhes.innerHTML = `
+        <h2>${jogos.nome}</h2>
+        <p>Email: ${jogos.desenvolvedor}</p>
+        <p>Telefone: ${jogos.genero}</p>
+        <p>cidade: ${jogos.anoLancamento}</p>
+        `
+
+    slideWrap.style.display = "none";
+    card.style.display = "none";
+
+}
 
 
 
@@ -135,8 +219,8 @@ function fadeToImage(novaSrc) {
     }, 250);
 }
 
-btnFrente.addEventListener("click", () => trocarImagem('frente'));
-btnTras.addEventListener("click", () => trocarImagem('tras'));
+if (btnFrente) btnFrente.addEventListener("click", () => trocarImagem('frente'));
+if (btnTras) btnTras.addEventListener("click", () => trocarImagem('tras'));
 
 
 
@@ -144,24 +228,9 @@ btnTras.addEventListener("click", () => trocarImagem('tras'));
 
 const btnTras2 = document.getElementById("btnTras2");
 const btnFrente2 = document.getElementById("btnFrente2");
-const track = document.querySelector(".carousel-track");
+const track = document.querySelector(".carousel-viewport");
 
 
-const allImages2 = [
-    "../assets/images/ghost.png",
-    "../assets/images/tlou.png",
-    "../assets/images/godOfWar.png",
-    "../assets/images/zelda.png",
-    "../assets/images/ocarina.png",
-    "../assets/images/majoras.png",
-    "../assets/images/rdr.png",
-    "../assets/images/eldenRing.png",
-    "../assets/images/gta5.png",
-    "../assets/images/spiderman.png",
-    "../assets/images/gears.png",
-    "../assets/images/cyberpunk.png"
-    
-];
 
 
 const visibleCount = 3;
@@ -170,6 +239,7 @@ let startIndex = 0;
 
 
 function renderVisibleSlides() {
+    if (!track) return;
     track.innerHTML = "";
     for (let i = 0; i < visibleCount; i++) {
         const idx = (startIndex + i) % allImages2.length;
@@ -198,8 +268,8 @@ window.addEventListener("load", () => {
 });
 
 
-btnFrente2.addEventListener("click", nextSlide);
-btnTras2.addEventListener("click", prevSlide);
+if (btnFrente2) btnFrente2.addEventListener("click", nextSlide);
+if (btnTras2) btnTras2.addEventListener("click", prevSlide);
 
 
 
@@ -237,6 +307,7 @@ function calculateGeneroVisible() {
 
 function renderGeneroSlides() {
     generoVisible = calculateGeneroVisible();
+    if (!trackGenero) return;
     trackGenero.innerHTML = "";
     for (let i = 0; i < generoVisible; i++) {
         const idx = (generoStart + i) % generoImages.length;

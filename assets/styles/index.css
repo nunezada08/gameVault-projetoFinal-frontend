@@ -341,6 +341,16 @@ main {
     margin-left: 20px;
 }
 
+.slide-card {
+    color: white;
+}
+
+.slide-cardDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .estrelasAvaliacao {
     margin-right: 20px;
     font-size: 20px;
