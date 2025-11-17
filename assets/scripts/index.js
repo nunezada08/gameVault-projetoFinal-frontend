@@ -59,7 +59,7 @@ function mostrarAvaliacoes(lista) {
 
 function gerarEstrelas(nota) {
     const estrelas = Math.round(nota / 2);
-    return "⭐".repeat(estrelas) + "☆".repeat(5 - estrelas);
+    return "⭐".repeat(estrelas) + "".repeat(5 - estrelas);
 }
 
 
@@ -136,6 +136,13 @@ function mostrarJogos(lista) {
         `;
 
         track.appendChild(slideWrap);
+
+        // adiciona listener para mostrar detalhes quando o título for clicado
+        const titleEl = slideWrap.querySelector('.game-title');
+        if (titleEl) {
+            titleEl.style.cursor = 'pointer';
+            titleEl.addEventListener('click', () => mostrarDetalhes(jg));
+        }
     });
 
     gamesContainer.appendChild(track);
@@ -143,16 +150,93 @@ function mostrarJogos(lista) {
 
 
 function mostrarDetalhes(jogos) {
-    detalhes.innerHTML = `
-        <h2>${jogos.nome}</h2>
-        <p>Email: ${jogos.desenvolvedor}</p>
-        <p>Telefone: ${jogos.genero}</p>
-        <p>cidade: ${jogos.anoLancamento}</p>
-        `
+    // substitui o conteúdo de <main> por uma página de detalhes
+    const main = document.querySelector('main');
+    if (!main) return;
 
-    slideWrap.style.display = "none";
-    card.style.display = "none";
+    // armazena o conteúdo original para poder voltar
+    if (!window.__originalMainContent) {
+        window.__originalMainContent = main.innerHTML;
+    }
 
+    const detalhesHTML = `
+        <main id="detalhes-jogo">
+      <section id="imagem-descricao">
+        <section id="image-jogo">
+          <img src="../assets/images/silksong-descricao.png" alt="">
+
+          <div id="plataformas">
+            <div class="plataforma-icon">
+              <img src="../assets/images/logoPlaystation.png" alt="">
+            </div>
+
+            <div class="plataforma-icon">
+              <img src="../assets/images/logoXbox.png" alt="">
+            </div>
+
+            <div class="plataforma-icon">
+              <img src="../assets/images/logoSteam.png" alt="">
+            </div>
+
+            <div id="avaliacao">
+              <p>4,5</p>
+              <img src="../assets/images/estrela.png" alt="">
+              <img src="../assets/images/estrela.png" alt="">
+              <img src="../assets/images/estrela.png" alt="">
+              <img src="../assets/images/estrela.png" alt="">
+            </div>
+          </div>
+
+          <div id="btns-add-remove">
+              <div id="add">
+                <p>ADICIONAR</p>
+              </div>
+              <div id="remove">
+                <p>REMOVER</p>
+              </div>
+            </div>
+
+        </section>
+        <section id="descricao-jogo">
+          <h1>${jogos.nome}</h1>
+          <h2>Descrição</h2>
+          <p>${jogos.descricao}</p>
+
+          <div id="informacoes-jogo">
+            <div class="info-jogo">
+              <h3>Desenvolvedora</h3>
+              <p>${jogos.desenvolvedor}</p>
+            </div>
+            <div class="info-jogo">
+              <h3>Data de lançamento</h3>
+              <p>${jogos.anoLancamento}</p>
+            </div>
+            <div class="info-jogo">
+              <h3>Gênero</h3>
+              <p>${jogos.genero}</p>
+            </div>
+
+            </div>
+          </div>
+        </section>
+      </section>
+      <hr>
+     <div id="divAvaliacoes"></div>
+    </main>
+    `;
+
+    main.innerHTML = detalhesHTML;
+
+    const btnVoltar = document.getElementById('btnVoltar');
+    if (btnVoltar) {
+        btnVoltar.addEventListener('click', () => {
+            if (window.__originalMainContent) {
+                main.innerHTML = window.__originalMainContent;
+                // re-executa carregarJogos para re-attach listeners, se necessário
+                carregarJogos();
+            }
+        });
+    }
 }
 
 
