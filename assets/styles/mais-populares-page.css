@@ -104,7 +104,7 @@ header {
   opacity: 1;
   will-change: opacity;
   max-width: 85%;
-  height: 900px;
+  height: 700px;
 }
 
 #banner button {
@@ -166,6 +166,10 @@ header {
   
 }
 
+.imagens p {
+  height: 90px;
+}
+
 .imagens img {
   height: 250px;
   margin: 60px;
@@ -194,8 +198,7 @@ header {
   height: 250px;
 }
 #red-dead-redemption-2 {
-  border-radius: 30px;
-  height: 250px;
+  border-radius: 30px
 }
 .mini {
   justify-content: center;
@@ -233,7 +236,6 @@ header {
 .jogos:hover {
   cursor: pointer;
   transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
   transition: all ease ;
 }
 .mini .caption {
@@ -295,12 +297,10 @@ footer {
     width: 90%;
   }
   #eldenRing {
-    width: 50%;
-    height: 280px;
+    height: 250px;
   }
   #death-stranding-2-mini {
-    width: 35%;
-    height: 280px;
+    height: 250px;
   }
 }
 
