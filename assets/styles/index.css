@@ -497,7 +497,6 @@ footer {
     #perfilMenu img { width: 28px; }
 }
 
-
 @media (max-width: 800px) {
     .detalhes-body { flex-direction: column; }
     .detalhes-capa { width: 100%; max-width: 100%; }

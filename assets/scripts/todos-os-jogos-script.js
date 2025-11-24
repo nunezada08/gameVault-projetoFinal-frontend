@@ -65,7 +65,7 @@ function mostrarJogos(lista) {
   });
 }
 
-
+// substitua a função mostrarDetalhes existente por esta implementação (igual à do index.js)
 function mostrarDetalhes(jogos) {
     // substitui o conteúdo de <main> por uma página de detalhes
     const main = document.querySelector('main');
@@ -80,7 +80,7 @@ function mostrarDetalhes(jogos) {
         <main id="detalhes-jogo">
       <section id="imagem-descricao">
         <section id="image-jogo">
-          <img src="../assets/images/silksong-descricao.png" alt="">
+          <img id="imagemBanner" src="${jogos.imagens}" alt="">
 
           <div id="plataformas">
             <div class="plataforma-icon">
@@ -104,14 +104,6 @@ function mostrarDetalhes(jogos) {
             </div>
           </div>
 
-          <div id="btns-add-remove">
-              <div id="add">
-                <p>ADICIONAR</p>
-              </div>
-              <div id="remove">
-                <p>REMOVER</p>
-              </div>
-            </div>
 
         </section>
         <section id="descricao-jogo">
@@ -143,4 +135,15 @@ function mostrarDetalhes(jogos) {
     `;
 
     main.innerHTML = detalhesHTML;
+
+    const btnVoltar = document.getElementById('btnVoltar');
+    if (btnVoltar) {
+        btnVoltar.addEventListener('click', () => {
+            if (window.__originalMainContent) {
+                main.innerHTML = window.__originalMainContent;
+                // re-executa carregarJogos para re-attach listeners, se necessário
+                carregarJogos();
+            }
+        });
+    }
 }
