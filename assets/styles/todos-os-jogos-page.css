@@ -121,9 +121,11 @@ header {
     display: flex;
     gap: 40px;
     padding: 20px;
+    width: 92%;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    
 }
 
 .game-card {
@@ -135,9 +137,9 @@ header {
 }
 
 .game-image {
-    width: 410px;
+    width: 310px;
     height: 231px;
-    max-width: 410px;
+    max-width: 310px;
     max-height: 231px;
     border-radius: 20px;
     object-fit: cover;
