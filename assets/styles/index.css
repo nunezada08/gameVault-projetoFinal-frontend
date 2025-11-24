@@ -254,6 +254,15 @@ main {
     cursor: pointer;
 }
 
+.slide-card img {
+    width: 330px;
+    height: 190px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center center;
+
+}
+
 .carousel-viewport2 {
     overflow: hidden;
     width: 100%;

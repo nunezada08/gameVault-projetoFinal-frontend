@@ -87,7 +87,7 @@ async function carregarJogos() {
             jogos = [];
         }
 
-        mostrarJogos(jogos.slice(0, 6));
+        mostrarJogos(jogos.slice(56, 59));
         
     } catch (error) {
 
@@ -130,9 +130,10 @@ function mostrarJogos(lista) {
         slideWrap.className = 'slide-cardDiv';
 
         slideWrap.innerHTML = `
-            <figure class="slide-card">     
+            <div class="slide-card">
+                <img src="${jg.imagens}" alt="${jg.nome || "Jogo"}" class="slide-image">
                 <figcaption class="game-title">${jg.nome || "Jogo não informado"}</figcaption>
-            </figure>
+            </div>
         `;
 
         track.appendChild(slideWrap);
@@ -143,7 +144,16 @@ function mostrarJogos(lista) {
             titleEl.style.cursor = 'pointer';
             titleEl.addEventListener('click', () => mostrarDetalhes(jg));
         }
+
+        const imageEl = slideWrap.querySelector('.slide-image');
+        if (imageEl) {
+            imageEl.style.cursor = 'pointer';
+            imageEl.addEventListener('click', () => mostrarDetalhes(jg));
+        }
+        
     });
+
+    
 
     gamesContainer.appendChild(track);
 }

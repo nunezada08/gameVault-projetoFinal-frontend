@@ -134,6 +134,20 @@ header {
     flex: 0 0 300px;
 }
 
+.game-image {
+    width: 410px;
+    height: 231px;
+    max-width: 410px;
+    max-height: 231px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.game-card {
+    overflow: hidden;
+}
+
 .game-card:focus,
 .game-card:hover {
     transform: translateY(-6px);

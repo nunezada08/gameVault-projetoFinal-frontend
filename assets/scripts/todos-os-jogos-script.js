@@ -40,9 +40,10 @@ function mostrarJogos(lista) {
     card.className = "todosJogos";
 
     card.innerHTML = `
-      <figure class="slide-card">     
-        <figcaption class="game-title">${jg.nome || "Jogo não informado"}</figcaption>
-      </figure>
+      <div class="game-card">
+        <img src="${jg.imagens}" alt="${jg.nome}" class="game-image">
+        <h3 class="game-title">${jg.nome}</h3>
+        </div>
     `;
 
     const titleEl = card.querySelector('.game-title');
