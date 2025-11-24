@@ -6,88 +6,43 @@
     <title>recomendados</title>
     <link rel="stylesheet" href="../assets/styles/recomendados-page.css" />
     <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+    <link rel="stylesheet" href="../assets/styles/detalhes.css">
   </head>
   <body>
     <header>
       <div id="logoNome">
-        <img src="../assets/images/logo.png" alt="Logo" width="90px" />
-        <h1>GAME VAULT</h1>
+          <a href="../index.html"><img src="../assets/images/logo.png" alt="Logo" width="40px"></a>
+          <a href="../index.html"><h1>GAME VAULT</h1></a>
       </div>
 
       <div id="sunoco">
-        <a href="./suporte-page.html">
-
-          <p class="sunocoText">Suporte</p>
-        </a>
-        <a href="./novidades-page.html">
-
-          <p class="sunocoText">Novidades</p>
-        </a>
-        <p class="sunocoText">Consoles</p>
+          <a href="./suporte-page.html">Suporte</a>
+          <a href="./novidades-page.html">Novidades</a>
+          <p class="sunocoText">Consoles</p>
+          <a href="./todos-os-jogos-page.html">Todos os jogos</a>
       </div>
 
       <div id="input">
-        <input type="text" placeholder="Pesquisa" />
-        <img src="../assets/images/lupa.png" alt="Lupa" width="30px" />
+          <input type="text" placeholder="Pesquisa">
+          <img src="../assets/images/lupa_nova.png" alt="Lupa" width="25px">
       </div>
 
       <div id="perfilMenu">
-        <a href="./login.html">
+          <a href="login.html"><img src="../assets/images/perfilFoto.png" alt="Perfil" width="35px"></a>
+          <img src="../assets/images/menu.png" alt="Menu" width="25px" id="menuIcon">
+      </div>
+  </header>
 
-          <img src="../assets/images/perfilFoto.png" alt="Perfil" width="35px" />
-        </a>
-        <img src="../assets/images/menu.png" alt="Menu" width="25px" />
-      </div>
-    </header>
-    <section>
-      <div id="jogosEmAlta">
-        <h1 id="titulo" >recomendados</h1>
-      </div>
-      <div class="jogos">
-        <div class="game-card">
-          <img id="ghost-of-tsushima-mini" src="../assets/images/ghost-of-tsushima-mini.png" alt="Ghost of Tsushima" />
-          <p class="caption">Ghost of Tsushima</p>
-        </div>
+  <main>
 
-        <div class="game-card">
-          <img id="horizon-forbidden-west-mini" src="../assets/images/horizon-forbidden-west-mini.png" alt="Horizon Forbidden West" />
-          <p class="caption">Horizon Forbidden West</p>
-        </div>
-      </div>
-       <div class="jogos-2">
-        <div class="game-card">
-          <img id="until-dawn-2-mini" src="../assets/images/until-dawn-2-mini.png" alt="Until Dawn 2" />
-          <p class="caption">Until Dawn 2</p>
-        </div>
+    <div id="jogosRecomendados">
+      <h1>Jogos recomendados</h1>
+    </div>
 
-        <div class="game-card">
-          <img id="days-gone-mini" src="../assets/images/days-gone-mini.png" alt="Days Gone" />
-          <p class="caption">Days Gone</p>
-        </div>
-      </div>
-       <div class="jogos-3">
-        <div class="game-card">
-          <img id="spider-man-2-mini" src="../assets/images/spider-man-2-mini.png" alt="Spider-Man 2" />
-          <p class="caption">Spider-Man 2</p>
-        </div>
+    <div class="jogos"></div>
 
-        <div class="game-card">
-          <img id="detroit-become-human-mini" src="../assets/images/detroit-become-human-mini.png" alt="Detroit: Become Human" />
-          <p class="caption">Detroit: Become Human</p>
-        </div>
-      </div>
-       <div class="jogos-4">
-        <div class="game-card">
-          <img id="demon-souls-mini" src="../assets/images/demon-souls-mini.png" alt="Demon's Souls" />
-          <p class="caption">Demon's Souls</p>
-        </div>
+  </main>
 
-        <div class="game-card">
-          <img id="stellar-blade-mini" src="../assets/images/stellar-blade-mini.png" alt="Stellar Blade" />
-          <p class="caption">Stellar Blade</p>
-        </div>
-      </div>
-    </section>
      <footer>
         <div id="secoes">
           <a href="../index.html">
@@ -114,5 +69,7 @@
 
         </div>
     </footer>
+
+    <script src="../assets/scripts/recomendadosScript.js"></script>
   </body>
 </html>

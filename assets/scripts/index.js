@@ -171,6 +171,9 @@ function mostrarDetalhes(jogos) {
 
     const detalhesHTML = `
         <main id="detalhes-jogo">
+        <div id="botao-voltar">
+          <button id="voltar" onclick="location.reload()">← Voltar</button>
+        </div>
       <section id="imagem-descricao">
         <section id="image-jogo">
           <img id="imagemBanner" src="${jogos.imagens}" alt="">

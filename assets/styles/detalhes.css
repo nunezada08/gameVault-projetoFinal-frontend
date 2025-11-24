@@ -16,6 +16,26 @@
     flex-direction: column;
 }
 
+#botao-voltar {
+    width: 100%;
+    margin-top: 40px;
+  
+  }
+  
+  #voltar {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: white;
+    transition: all 0.3s ease;
+    margin-left: 100px;
+  }
+  
+  #voltar:hover {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #f0f0f0;
+  }
+
 #image-jogo img {
     width: 90%;
     height: 90%;

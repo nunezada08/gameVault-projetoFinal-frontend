@@ -21,165 +21,172 @@ header {
   align-items: center;
   justify-content: space-between;
   color: rgb(255, 255, 255);
-  padding: 0 3%;
+  padding: 0 5%;
+  gap: 24px;
 }
+
+#logoNome a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
 #logoNome {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    width: 27%;
+    gap: 10px;
 }
 
 #logoNome img {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 #perfilMenu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-right: 20px;
 }
 
 #sunoco {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 60%;
 }
 
-.sunocoText {
-  color: white;
-  text-decoration: none;
+#sunoco a {
+    color: white;
+    text-decoration: none;
+    outline: none;
 }
+
 .sunocoText:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-.sunocoText:hover {
-  cursor: pointer;
+    cursor: pointer;
+
 }
 
 #input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #111114;
-  border-radius: 30px;
-  width: 22%;
-  height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111114; 
+    border-radius: 30px;
+    width: 22%;
+    height: 35px;
 }
 
 #input input {
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 1rem;
-  width: 100%;
-  padding-left: 2px;
-  margin-left: 15px;
-  color: white;
+
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    width: 100%;
+    padding-left: 2px;
+    margin-left: 15px;
+    color: white;
 }
 
 #input img {
-  margin-right: 15px;
+    margin-right: 15px;
+    
 }
 
-#jogosEmAlta {
-  justify-content: start;
-  display: flex;
-  text-align: start;
-  margin-left: 10%;
-  margin-top: 40px;
-  color: white;
-}
-.jogos {
-  justify-content: center;
+main {
+  width: 100%;
   display: flex;
   align-items: center;
-  margin-top: 10px;
-}
-.game-card:hover{
-  cursor: pointer;
-  transform: translateY(-6px);
-  transition: all ease ;
-}
-#ghost-of-tsushima-mini {
-  width: 80%;
-  margin: 30px;
-}
-
-#horizon-forbidden-west-mini {
-  width: 80%;
-  margin: 30px;
-}
-
-.jogos-2 {
   justify-content: center;
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-#until-dawn-2-mini {
-  width: 80%;
-  margin: 30px;
-}
-
-#days-gone-mini {
-  width: 80%;
-  margin: 30px;
-}
-
-.jogos-3 {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-#spider-man-2-mini {
-  width: 80%;
-  margin: 30px;
-}
-
-#detroit-become-human-mini {
-  width: 80%;
-  margin: 30px;
-}
-
-.jogos-4 {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-#demon-souls-mini {
-  width: 80%;
-  margin: 30px;
-}
-
-#stellar-blade-mini {
-  width: 80%;
-  margin: 30px;
-}
-
-.game-card{
-  display: flex;
   flex-direction: column;
+}
+
+#jogosRecomendados {
+  margin-top: 80px;
+  color: white;
+  display: flex;
+  margin-right: 52%;
+}
+
+#todosOsJogos {
+  display: flex;
   align-items: center;
+  text-align: start;
+  gap: 40px;
+  margin-top: 20px;
+  padding: 0 10%;
 }
 
-.game-card img{
-  border-radius: 12px;
+#todosOsJogos button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  border: none;
+  background-color: #292929;
+  cursor: pointer;
+}
+
+.todos-jogos{
+  font-family: 'Inter', sans-serif;
+  color: white;
+  margin: 20px 0 0 0;
+  text-align: left;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.jogos {
+  display: flex;
+  gap: 90px;
+  padding: 20px;
+  width: 62%;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  
+}
+
+.game-image {
+  width: 350px;
+  height: 271px;
+  max-width: 350px;
+  max-height: 271px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.game-card {
+  overflow: hidden;
+}
+
+.game-card:focus,
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px #131316;
+}
+
+.game-image {
   display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
-.game-card .caption{
+.game-title {
   color: #ffffff;
-  margin-top: 8px;
-  font-size: 14px;
   text-align: center;
+  padding: 8px 6px;
+  font-size: 0.95rem;
 }
+
+.game-card figure { margin: 0; }
+
+
 footer {
   width: 100%;
   height: 80px;

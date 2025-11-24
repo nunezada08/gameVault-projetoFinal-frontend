@@ -18,7 +18,7 @@ async function carregarJogos() {
             jogos = [];
         }
 
-        mostrarJogos(jogos.slice(0, 100));
+        mostrarJogos(jogos.slice(34, 40));
 
     } catch (error) {
       console.error("Erro ao carregar jogos:", error);
@@ -27,7 +27,7 @@ async function carregarJogos() {
   }
 
   window.addEventListener('DOMContentLoaded', () => {
-    gamesList = document.querySelector('.games-list');
+    gamesList = document.querySelector('.jogos');
     carregarJogos();
   });
 
@@ -54,6 +54,21 @@ function mostrarJogos(lista) {
         titleEl.addEventListener('click', () => mostrarDetalhes(jg));
       } else {
         titleEl.addEventListener('click', () => {
+          // fallback: navegar para página de detalhes (se existir uma rota)
+          // aqui apenas previne erro — personalize conforme seu roteamento
+          console.warn('mostrarDetalhes não definido; clique registrado para', jg.nome);
+        });
+      }
+    }
+
+    const titleIM = card.querySelector('.game-image');
+    if (titleIM) {
+      titleIM.style.cursor = 'pointer';
+      // se existir a função global mostrarDetalhes, usa ela; caso contrário, faz nada ou redireciona
+      if (typeof mostrarDetalhes === 'function') {
+        titleIM.addEventListener('click', () => mostrarDetalhes(jg));
+      } else {
+        titleIM.addEventListener('click', () => {
           // fallback: navegar para página de detalhes (se existir uma rota)
           // aqui apenas previne erro — personalize conforme seu roteamento
           console.warn('mostrarDetalhes não definido; clique registrado para', jg.nome);
@@ -138,15 +153,4 @@ function mostrarDetalhes(jogos) {
     `;
 
     main.innerHTML = detalhesHTML;
-
-    const btnVoltar = document.getElementById('btnVoltar');
-    if (btnVoltar) {
-        btnVoltar.addEventListener('click', () => {
-            if (window.__originalMainContent) {
-                main.innerHTML = window.__originalMainContent;
-                // re-executa carregarJogos para re-attach listeners, se necessário
-                carregarJogos();
-            }
-        });
-    }
 }
