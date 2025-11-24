@@ -11,7 +11,7 @@ async function carregarAvaliacoes() {
 
         const avaliacoes = dados.avaliacoes;
 
-        mostrarAvaliacoes(avaliacoes.slice(0, 3));
+        mostrarAvaliacoes(avaliacoes.slice(4, 7));
 
     } catch (error) {
         console.error("Erro ao carregar avaliações:", error);
@@ -33,7 +33,7 @@ function mostrarAvaliacoes(lista) {
                 <div class="nomeJogo">
                     <img src="./assets/images/perfilFoto.png" alt="Perfil" width="40px">
                     <div>
-                        <div class="nomeUser">${av.usuario}</div>
+                        <div class="nomeUser">${av.usuario.nome}</div>
                         <p>${av.jogo || "Jogo não informado"}</p>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ async function carregarJogos() {
             jogos = [];
         }
 
-        mostrarJogos(jogos.slice(0, 3));
+        mostrarJogos(jogos.slice(0, 6));
         
     } catch (error) {
 
@@ -163,7 +163,7 @@ function mostrarDetalhes(jogos) {
         <main id="detalhes-jogo">
       <section id="imagem-descricao">
         <section id="image-jogo">
-          <img src="../assets/images/silksong-descricao.png" alt="">
+          <img id="imagemBanner" src="${jogos.imagens}" alt="">
 
           <div id="plataformas">
             <div class="plataforma-icon">
@@ -187,14 +187,6 @@ function mostrarDetalhes(jogos) {
             </div>
           </div>
 
-          <div id="btns-add-remove">
-              <div id="add">
-                <p>ADICIONAR</p>
-              </div>
-              <div id="remove">
-                <p>REMOVER</p>
-              </div>
-            </div>
 
         </section>
         <section id="descricao-jogo">
@@ -305,55 +297,6 @@ function fadeToImage(novaSrc) {
 
 if (btnFrente) btnFrente.addEventListener("click", () => trocarImagem('frente'));
 if (btnTras) btnTras.addEventListener("click", () => trocarImagem('tras'));
-
-
-
-
-
-const btnTras2 = document.getElementById("btnTras2");
-const btnFrente2 = document.getElementById("btnFrente2");
-const track = document.querySelector(".carousel-viewport");
-
-
-
-
-const visibleCount = 3;
-
-let startIndex = 0;
-
-
-function renderVisibleSlides() {
-    if (!track) return;
-    track.innerHTML = "";
-    for (let i = 0; i < visibleCount; i++) {
-        const idx = (startIndex + i) % allImages2.length;
-        const img = document.createElement("img");
-        img.className = "slide";
-        img.src = allImages2[idx];
-        img.alt = `jogo-${idx}`;
-        track.appendChild(img);
-    }
-}
-
-
-function nextSlide() {
-    startIndex = (startIndex + 1) % allImages2.length;
-    renderVisibleSlides();
-}
-
-
-function prevSlide() {
-    startIndex = (startIndex - 1 + allImages2.length) % allImages2.length;
-    renderVisibleSlides();
-}
-
-window.addEventListener("load", () => {
-    renderVisibleSlides();
-});
-
-
-if (btnFrente2) btnFrente2.addEventListener("click", nextSlide);
-if (btnTras2) btnTras2.addEventListener("click", prevSlide);
 
 
 
