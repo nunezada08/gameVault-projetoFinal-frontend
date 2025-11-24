@@ -49,17 +49,27 @@ function mostrarJogos(lista) {
     const titleEl = card.querySelector('.game-title');
     if (titleEl) {
       titleEl.style.cursor = 'pointer';
-      // se existir a função global mostrarDetalhes, usa ela; caso contrário, faz nada ou redireciona
       if (typeof mostrarDetalhes === 'function') {
         titleEl.addEventListener('click', () => mostrarDetalhes(jg));
       } else {
         titleEl.addEventListener('click', () => {
-          // fallback: navegar para página de detalhes (se existir uma rota)
-          // aqui apenas previne erro — personalize conforme seu roteamento
           console.warn('mostrarDetalhes não definido; clique registrado para', jg.nome);
         });
       }
     }
+    const titleim = card.querySelector('.game-image');
+    if (titleim) {
+      titleim.style.cursor = 'pointer';
+      if (typeof mostrarDetalhes === 'function') {
+        titleim.addEventListener('click', () => mostrarDetalhes(jg));
+      } else {
+        titleim.addEventListener('click', () => {
+          console.warn('mostrarDetalhes não definido; clique registrado para', jg.nome);
+        });
+      }
+    }
+    
+ 
 
     gamesList.appendChild(card);
   });
