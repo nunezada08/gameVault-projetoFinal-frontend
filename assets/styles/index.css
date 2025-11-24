@@ -208,6 +208,14 @@ main {
     overflow: hidden;
     width: 100%;
 }
+
+.carousel-viewport img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do contêiner */
+    object-fit: contain; /* Mantém a proporção da imagem e evita cortes */
+    object-position: center;
+}
+
 .carousel-track {
     display: flex;
     gap: 24px;
@@ -217,18 +225,6 @@ main {
 .slide {
     object-fit: cover;
     height: auto;
-}
-
-#btnFrente3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#btnTras3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #exploreCategoria {

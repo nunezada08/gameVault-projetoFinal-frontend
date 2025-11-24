@@ -1,9 +1,10 @@
 #imagem-descricao {
     width: 100%;
-    height: 450px;
+    height: 550px;
     display: flex; 
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 70px;
 }
 
 #image-jogo {
@@ -16,14 +17,14 @@
 }
 
 #image-jogo img {
-    width: 100%;
+    width: 90%;
     height: 90%;
 }
 
 #plataformas {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 90%;
     align-items: start;
     margin-top: 5px;
     margin-left: 15px;
@@ -64,6 +65,7 @@
     display: flex;
     flex-direction: column;
     color: white;
+    margin-top: 20px;
 }
 
 #descricao-jogo h1 {
