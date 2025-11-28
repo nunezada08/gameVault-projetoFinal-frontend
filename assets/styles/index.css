@@ -292,29 +292,129 @@ main {
 #divFiltroJogos {
     width: 100%;
     margin-top: 20px;
-    height: 120px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    border-bottom: 2px solid rgba(255,255,255,0.06);
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
     padding-bottom: 40px;
     
+}
+
+#divFiltroJogos a {
+    color: #FFFFFF;
+    font-size: 11px;
+    text-decoration: none;
+    outline: none;
+}
+
+#divGeneroJogos a {
+    color: white;
+    font-size: 11px;
+    text-decoration: none;
+    outline: none;
+}
+
+#divGeneroJogos {
+    width: 100%;
+    margin-top: 20px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+#divGeneroJogos section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 243px;
+    height: 365px;
+    border-radius: 40px;
+    background-color: rgba(255,255,255,0.06);
+    color: #FFFFFF;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+}
+#divGeneroJogos section a {
+    color: #FFFFFF;
+    font-size: 11px;
+    text-decoration: none;
+    outline: none;
 }
 
 .filtrosJogos {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 183px;
-    height: 45px;
-    border-radius: 10px;
+    width: 243px;
+    height: 365px;
+    border-radius: 40px;
     background-color: rgba(255,255,255,0.06);
     color: #FFFFFF;
     font-size: 11px;
-    
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.filtrosJogos:hover {
+    border: 2px solid #0984d6;
+    transition: all 0.5s ease;
+
+}
+
+#filtrosJogosAcao:hover {
+    border: 2px solid #d60909;
+    transition: all 0.5s ease;
+}
+
+#filtrosJogosSouls:hover {
+    border: 2px solid #d65b09;
+    transition: all 0.5s ease;
+}
+
+#filtrosJogosTerror:hover {
+    border: 2px solid #6d01ac;
+    transition: all 0.5s ease;
+}
+
+#filtrosJogosFps:hover {
+    border: 2px solid #0faf00;
+    transition: all 0.5s ease;
+}
+
+#filtrosJogosRpg:hover {
+    border: 2px solid #00578a;
+    transition: all 0.5s ease;
+}
+
+#filtrosJogosAventura:hover {
+    border: 2px solid #8a7c00;
+    transition: all 0.5s ease;
+}
+
+#filtrosJogosVr:hover {
+    border: 2px solid #7ccfff;
+    transition: all 0.5s ease;
+}
+
+#filtrosJogosMapa:hover {
+    border: 2px solid #ffa034;
+    transition: all 0.5s ease;
+}
+
+#filtrosJogosLuta:hover {
+    border: 2px solid #84ff3c;
+    transition: all 0.5s ease;
+}
+
+#filtrosJogosIndie:hover {
+    border: 2px solid #aa60ff;
+    transition: all 0.5s ease;
 }
 
 .filtrosJogos a {

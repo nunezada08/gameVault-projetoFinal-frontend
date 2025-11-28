@@ -11,7 +11,6 @@ body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    
 }
 
 header {
@@ -24,58 +23,55 @@ header {
     color: rgb(255, 255, 255);
     padding: 0 5%;
     gap: 24px;
-}
+  }
   
-#logoNome a {
+  #logoNome a {
       color: white;
       text-decoration: none;
       outline: none;
-}
+  }
   
-#logoNome {
+  #logoNome {
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 13px;
       width: 27%;
       gap: 10px;
-}
+  }
   
-#logoNome img {
+  #logoNome img {
       margin-top: 5px;
-}
+  }
   
-.nomeUser {
-      margin-top: 15px;
-}
   #perfilMenu {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 30px;
       margin-right: 20px;
-}
+  }
   
-#sunoco {
+  #sunoco {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 50px;
       width: 60%;
-}
+  }
   
-#sunoco a {
+  #sunoco a {
       color: white;
       text-decoration: none;
       outline: none;
-}
+  }
   
-.sunocoText:hover {
+  .sunocoText:hover {
       cursor: pointer;
   
-}
+  }
   
-#input {
+  #input {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -83,9 +79,9 @@ header {
       border-radius: 30px;
       width: 22%;
       height: 35px;
-}
+  }
   
-#input input {
+  #input input {
   
       border: none;
       outline: none;
@@ -95,95 +91,101 @@ header {
       padding-left: 2px;
       margin-left: 15px;
       color: white;
-}
+  }
   
-#input img {
+  #input img {
       margin-right: 15px;
       
-}
-  
-#imagem {
-      border-radius: 30px;
-      display: block;
-      max-width: 100%;
-}
-  
-#btnBuscar {
-      background-color: #111114 ;
-      border: none;
-      cursor: pointer;
+  }
+
+  #btnBuscar {
+    background-color: #111114 ;
+    border: none;
+    cursor: pointer;
 }
 
-#banner{
-    width: 100%;
-    height: auto; 
-}
-#banner img{
-    width: 100%;
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
-
-main{
-    width: 100%;
+#todosOsJogos {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#sobre{
+    justify-content: flex-start;
+    gap: 40px;
     margin-top: 20px;
-    width: 100%;
-    height: 100vh;
-    flex-direction: row;
-    display: flex;
+    padding: 0 10%;
 }
 
-#sobre-console{
-    width: 60%;
-    height: 100%;
+#todosOsJogos button {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    border: none;
+    background-color: #292929;
+    cursor: pointer;
 }
-#sobre-console h1{
+
+.todos-jogos{
+    font-family: 'Inter', sans-serif;
     color: white;
-    margin: 20px;
+    margin: 20px 0 0 0;
+    text-align: left;
+    font-weight: 300;
+    font-size: 1.2rem;
 }
-#sobre-console p{
-    color: white;
+
+.games-list {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    width: 92%;
     justify-content: center;
-    text-align: center;
-    display: flex;
-    margin-left: 12px;
-    margin-right: 12px;
-}
-
-
-
-
-
-#sobre-criador{
-    width: 40%;
-    height: 100%;
-    flex-direction: column;
-    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-}
-#sobre-criador h1{
-    color: white;
-    margin: 20px;
+    margin-left: 85px;
+    
 }
 
-#sobre-criador p{
-    color: white;
+.game-image {
+    width: 310px;
+    height: 231px;
+    max-width: 310px;
+    max-height: 231px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.game-card {
+    overflow: hidden;
+}
+
+.game-card:focus,
+.game-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px #131316;
+}
+
+.game-image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.game-title {
+    color: #ffffff;
     text-align: center;
-    display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 8px 6px;
+    font-size: 0.95rem;
+}
+
+.game-card figure { margin: 0; }
+
+#btnBuscar {
+    background-color: #111114 ;
+    border: none;
+    cursor: pointer;
 }
 
 footer {
+    margin-top: 347px;
     width: 100%;
     height: 80px;
     background-color: #171717;
@@ -224,4 +226,30 @@ footer {
     text-align: center;
     flex-direction: column;
     background-color: #171717;
+}
+
+
+@media (max-width: 1200px) {
+    #todosOsJogos { padding: 0 8%; gap: 36px }
+    .games-list { gap: 28px }
+    .game-card { flex: 0 0 280px; max-width: 280px }
+}
+
+@media (max-width: 992px) {
+    .game-card { flex: 0 0 calc(33.333% - 28px); max-width: calc(33.333% - 28px) }
+}
+
+@media (max-width: 768px) {
+    #todosOsJogos { padding: 0 6%; gap: 24px }
+    .games-list { gap: 20px; padding: 16px }
+    .game-card { flex: 0 0 calc(50% - 20px); max-width: calc(50% - 20px) }
+    .game-title { font-size: 0.95rem }
+}
+
+@media (max-width: 420px) {
+    #todosOsJogos { padding: 0 4%; gap: 12px }
+    .games-list { gap: 12px; padding: 12px }
+    .game-card { flex: 0 0 100%; max-width: 100% }
+    .game-title { font-size: 0.95rem; padding: 10px 6px }
+    #input { max-width: 220px }
 }
