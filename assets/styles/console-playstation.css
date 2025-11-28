@@ -81,6 +81,13 @@ header {
 #input img {
     margin-right: 15px;
 }
+
+#btnBuscar {
+    background-color: #111114 ;
+    border: none;
+    cursor: pointer;
+}
+
 #imagem {
     border-radius: 30px;
     display: block;
@@ -154,4 +161,47 @@ main{
     display: flex;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #171717;
+}
+
+#secoes {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+#secoes a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+#senai {
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#textosFinais {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #171717;
 }

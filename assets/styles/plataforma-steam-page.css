@@ -238,26 +238,6 @@ grid-template-columns: repeat(3, 1fr);
   margin-bottom: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer {
   width: 100%;
   background-color: #171717;
@@ -277,6 +257,11 @@ footer {
   gap: 10px;
   color: white;
 }
+#secoes a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
 
 #senai {
   display: flex;
@@ -291,4 +276,5 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  background-color: #171717;
 }

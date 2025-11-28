@@ -437,6 +437,12 @@ footer {
     color: white;
 }
 
+#secoes a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
 #senai {
     width: 100%;
     height: 30px;
@@ -455,6 +461,7 @@ footer {
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    background-color: #171717;
 }
 
 /* Media queries para notebooks e dispositivos móveis */

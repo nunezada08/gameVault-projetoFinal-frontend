@@ -1,6 +1,24 @@
 const APIJg = "http://localhost:3001/jogos";
 const APIAv = "http://localhost:3001/avaliacoes";
 
+btnBuscar.onclick = () => {
+    const termo = (inputBuscar.value || '').trim().toLowerCase();
+    if (!termo) return; // não faz nada se vazio
+
+    const filtrados = jogos.filter((u) => u.nome && u.nome.toLowerCase().includes(termo));
+
+    if (filtrados.length === 0) {
+        alert('Jogo não encontrado.');
+        return;
+    }
+
+    // tenta correspondência exata primeiro, senão pega o primeiro resultado
+    const exact = filtrados.find(f => f.nome.toLowerCase() === termo);
+    const escolhido = exact || filtrados[0];
+
+    mostrarDetalhes(escolhido);
+}
+
 let divAvaliacoes = document.getElementById("divAvaliacoes");
 
 async function carregarAvaliacoes() {

@@ -107,8 +107,8 @@ async function carregarJogos() {
             jogos = [];
         }
 
-        mostrarJogos(jogos.slice(22, 25));
-        
+        mostrarJogos(jogos.slice(90, 93));
+    
     } catch (error) {
 
         console.error("Erro ao carregar jogos:", error)

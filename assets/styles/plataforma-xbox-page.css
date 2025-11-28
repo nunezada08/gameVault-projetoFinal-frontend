@@ -291,4 +291,11 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  background-color: #171717;
+}
+
+#secoes a {
+    color: white;
+    text-decoration: none;
+    outline: none;
 }

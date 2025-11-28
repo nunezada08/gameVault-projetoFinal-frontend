@@ -103,6 +103,12 @@ main {
   display: block;
 }
 
+#btnBuscar {
+    background-color: #111114 ;
+    border: none;
+    cursor: pointer;
+}
+
 #banner {
   width: 100%;
   height: clamp(200px, 20vw, 500px);
@@ -225,22 +231,11 @@ grid-template-columns: repeat(3, 1fr);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#secoes a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
 
 
 
@@ -264,6 +259,12 @@ footer {
   color: white;
 }
 
+#secoes a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
 #senai {
   display: flex;
   justify-content: center;
@@ -277,4 +278,5 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  background-color: #171717;
 }

@@ -103,6 +103,12 @@ main {
   display: block;
 }
 
+#btnBuscar {
+    background-color: #111114 ;
+    border: none;
+    cursor: pointer;
+}
+
 .container {
     max-width: 980px;
     width: 100%;
@@ -165,12 +171,7 @@ main {
     text-align: center;
     display: flex;
     align-items: center;
-<<<<<<< HEAD
-    justify-content: space-between;
-    color: rgb(255, 255, 255);
-    padding: 0 5%;
-    gap: 24px;
-  }
+}
   
   #logoNome a {
       color: white;
@@ -249,11 +250,16 @@ main {
   #input img {
       margin-right: 15px;
       
-  }
-=======
+
     justify-content: center;
     min-height: 92px;
     transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+#btnBuscar {
+    background-color: #111114 ;
+    border: none;
+    cursor: pointer;
 }
 
 .service-btn:hover {
@@ -331,7 +337,7 @@ main {
 #contact-icons a:hover {
     transform: translateY(-5px);
 }
->>>>>>> 18f0a74e9c067aedd9e0b1f29ccbc6812afc77dd
+
 
 footer {
     width: 100%;
@@ -353,6 +359,12 @@ footer {
     color: white;
 }
 
+#secoes a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
 #senai {
     display: flex;
     justify-content: center;
@@ -366,6 +378,8 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    background-color: #171717;
+    
 }
 
 @media (max-width: 768px) {
