@@ -1,4 +1,65 @@
 const APIJg = "http://localhost:3001/jogos";
+const APIAv = "http://localhost:3001/avaliacoes";
+
+
+let divAvaliacoes = document.getElementById("divAvaliacoes");
+
+async function carregarAvaliacoes() {
+    try {
+        const resposta = await fetch(APIAv);
+        const dados = await resposta.json();
+
+        const avaliacoes = dados.avaliacoes;
+
+        mostrarAvaliacoes(avaliacoes.slice(72, 75));
+
+    } catch (error) {
+        console.error("Erro ao carregar avaliações:", error);
+        divAvaliacoes.innerHTML = "<p>Erro ao carregar avaliações.</p>";
+    }
+}
+
+carregarAvaliacoes();
+
+function mostrarAvaliacoes(lista) {
+    divAvaliacoes.innerHTML = "";
+
+    lista.forEach(av => {
+        const card = document.createElement("section");
+        card.className = "avalicao-user";
+
+        card.innerHTML = `
+            <div class="quaseHeader">
+                <div class="nomeJogo">
+                    <img src="../assets/images/perfilFoto.png" alt="Perfil" width="40px">
+                    <div>
+                        <div class="nomeUser">${av.usuario && av.usuario.nome ? av.usuario.nome : 'Usuário'}</div>
+                    </div>
+                </div>
+
+                <div class="estrelasAvaliacao">
+                    ${gerarEstrelas(av.nota)}
+                </div>
+            </div>
+
+            <div class="comentario">
+                ${av.comentario}
+            </div>
+
+            <div class="likeDeslike">
+                <img src="../assets/images/deslike.png" alt="deslike" width="20px">
+                <img src="../assets/images/like.png" alt="like" width="20px">
+            </div>
+        `;
+
+        divAvaliacoes.appendChild(card);
+    });
+}
+
+function gerarEstrelas(nota) {
+    const estrelas = Math.round(nota / 2);
+    return "⭐".repeat(estrelas) + "".repeat(5 - estrelas);
+}
 
 let gamesList;
 
@@ -18,7 +79,7 @@ async function carregarJogos() {
             jogos = [];
         }
 
-        mostrarJogos(jogos.slice(34, 40));
+        mostrarJogos(jogos.filter(j => Number(j.anoLancamento) <= 2000));
 
     } catch (error) {
       console.error("Erro ao carregar jogos:", error);
@@ -27,7 +88,7 @@ async function carregarJogos() {
   }
 
   window.addEventListener('DOMContentLoaded', () => {
-    gamesList = document.querySelector('.jogos');
+    gamesList = document.querySelector('.games-list');
     carregarJogos();
   });
 
@@ -49,39 +110,34 @@ function mostrarJogos(lista) {
     const titleEl = card.querySelector('.game-title');
     if (titleEl) {
       titleEl.style.cursor = 'pointer';
-      // se existir a função global mostrarDetalhes, usa ela; caso contrário, faz nada ou redireciona
       if (typeof mostrarDetalhes === 'function') {
         titleEl.addEventListener('click', () => mostrarDetalhes(jg));
       } else {
         titleEl.addEventListener('click', () => {
-          // fallback: navegar para página de detalhes (se existir uma rota)
-          // aqui apenas previne erro — personalize conforme seu roteamento
           console.warn('mostrarDetalhes não definido; clique registrado para', jg.nome);
         });
       }
     }
-
-    const titleIM = card.querySelector('.game-image');
-    if (titleIM) {
-      titleIM.style.cursor = 'pointer';
-      // se existir a função global mostrarDetalhes, usa ela; caso contrário, faz nada ou redireciona
+    const titleim = card.querySelector('.game-image');
+    if (titleim) {
+      titleim.style.cursor = 'pointer';
       if (typeof mostrarDetalhes === 'function') {
-        titleIM.addEventListener('click', () => mostrarDetalhes(jg));
+        titleim.addEventListener('click', () => mostrarDetalhes(jg));
       } else {
-        titleIM.addEventListener('click', () => {
-          // fallback: navegar para página de detalhes (se existir uma rota)
-          // aqui apenas previne erro — personalize conforme seu roteamento
+        titleim.addEventListener('click', () => {
           console.warn('mostrarDetalhes não definido; clique registrado para', jg.nome);
         });
       }
     }
+    
+ 
 
     gamesList.appendChild(card);
   });
 }
 
 // substitua a função mostrarDetalhes existente por esta implementação (igual à do index.js)
-function mostrarDetalhes(jogos) {
+function mostrarDetalhes(jogo) {
     // substitui o conteúdo de <main> por uma página de detalhes
     const main = document.querySelector('main');
     if (!main) return;
@@ -92,13 +148,13 @@ function mostrarDetalhes(jogos) {
     }
 
     const detalhesHTML = `
-        <main id="detalhes-jogo">
+       <main id="detalhes-jogo">
         <div id="botao-voltar">
           <button id="voltar" onclick="location.reload()">← Voltar</button>
         </div>
       <section id="imagem-descricao">
         <section id="image-jogo">
-          <img id="imagemBanner" src="${jogos.imagens}" alt="">
+                <img id="imagemBanner" src="${jogo.imagens}" alt="">
 
           <div id="plataformas">
             <div class="plataforma-icon">
@@ -125,22 +181,22 @@ function mostrarDetalhes(jogos) {
 
         </section>
         <section id="descricao-jogo">
-          <h1>${jogos.nome}</h1>
+          <h1>${jogo.nome}</h1>
           <h2>Descrição</h2>
-          <p>${jogos.descricao}</p>
+          <p>${jogo.descricao}</p>
 
           <div id="informacoes-jogo">
             <div class="info-jogo">
               <h3>Desenvolvedora</h3>
-              <p>${jogos.desenvolvedor}</p>
+              <p>${jogo.desenvolvedor}</p>
             </div>
             <div class="info-jogo">
               <h3>Data de lançamento</h3>
-              <p>${jogos.anoLancamento}</p>
+              <p>${jogo.anoLancamento}</p>
             </div>
             <div class="info-jogo">
               <h3>Gênero</h3>
-              <p>${jogos.genero}</p>
+              <p>${jogo.genero}</p>
             </div>
 
             </div>
@@ -153,4 +209,18 @@ function mostrarDetalhes(jogos) {
     `;
 
     main.innerHTML = detalhesHTML;
+
+     divAvaliacoes = document.getElementById("divAvaliacoes");
+    if (divAvaliacoes) carregarAvaliacoes();
+
+    const btnVoltar = document.getElementById('btnVoltar');
+    if (btnVoltar) {
+        btnVoltar.addEventListener('click', () => {
+            if (window.__originalMainContent) {
+                main.innerHTML = window.__originalMainContent;
+                // re-executa carregarJogos para re-attach listeners, se necessário
+                carregarJogos();
+            }
+        });
+    }
 }

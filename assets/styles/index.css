@@ -45,6 +45,10 @@ header {
     margin-top: 5px;
 }
 
+.nomeUser {
+    margin-top: 15px;
+}
+
 #perfilMenu {
     display: flex;
     align-items: center;
@@ -103,7 +107,12 @@ header {
     border-radius: 30px;
     display: block;
     max-width: 100%;
-    height: auto;
+}
+
+#btnBuscar {
+    background-color: #111114 ;
+    border: none;
+    cursor: pointer;
 }
 
 #jogosEmAlta {
@@ -210,9 +219,9 @@ main {
 }
 
 .carousel-viewport img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
-    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do contêiner */
-    object-fit: contain; /* Mantém a proporção da imagem e evita cortes */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -287,7 +296,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     border-bottom: 2px solid rgba(255,255,255,0.06);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -302,7 +311,7 @@ main {
     width: 183px;
     height: 45px;
     border-radius: 10px;
-    background-color: #0783D6;
+    background-color: rgba(255,255,255,0.06);
     color: #FFFFFF;
     font-size: 11px;
     
@@ -361,16 +370,6 @@ main {
 
 .nomeJogo img {
     margin-left: 20px;
-}
-
-.slide-card {
-    color: white;
-}
-
-.slide-cardDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .estrelasAvaliacao {
@@ -461,7 +460,7 @@ footer {
 /* Media queries para notebooks e dispositivos móveis */
 @media (max-width: 1366px) {
 
-    #banner #imagem { width: 900px }
+    #banner #imagem { width: 900px; height: 490px; }
     .slide { width: 330px }
     .slideGenero { width: 190px; height: 311px ;}
 }

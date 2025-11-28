@@ -28,79 +28,93 @@ header {
   gap: 24px;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1px;
+#logoNome a {
+    color: white;
+    text-decoration: none;
+    outline: none;
 }
 
 #logoNome {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 0;
-  font-size: 12px;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    width: 27%;
+    gap: 10px;
 }
 
 #logoNome img {
-  margin-top: 5px;
-  width: 40px;
-  height: 40px;
+    margin-top: 5px;
+}
+
+.nomeUser {
+    margin-top: 15px;
 }
 
 #perfilMenu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-right: 20px;
 }
 
 #sunoco {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 60%;
+}
+
+#sunoco a {
+    color: white;
+    text-decoration: none;
+    outline: none;
 }
 
 .sunocoText:hover {
-  cursor: pointer;
+    cursor: pointer;
+
 }
 
 #input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #11111446;
-  border-radius: 30px;
-  width: 100%;
-  max-width: 200px;
-  height: 35px;
-  margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111114; 
+    border-radius: 30px;
+    width: 22%;
+    height: 35px;
 }
 
 #input input {
-  color: rgb(154, 156, 162);
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 1rem;
-  width: 100%;
-  padding-left: 2px;
-  margin-left: 15px;
+
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    width: 100%;
+    padding-left: 2px;
+    margin-left: 15px;
+    color: white;
 }
 
 #input img {
-  margin-right: 12px;
-  margin-top: 0;
-  width: 25px;
-  height: 25px;
-  object-fit: contain;
-  display: block;
+    margin-right: 15px;
+    
+}
+
+#imagem {
+    border-radius: 30px;
+    display: block;
+    max-width: 100%;
+}
+
+#btnBuscar {
+    background-color: #111114 ;
+    border: none;
+    cursor: pointer;
 }
 
 #banner {

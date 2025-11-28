@@ -1,8 +1,29 @@
 const APIAv = "http://localhost:3001/avaliacoes";
 const APIJg = "http://localhost:3001/jogos";
 
+const inputBuscar = document.getElementById("inputBuscar");
+const btnBuscar = document.getElementById("btnBuscar");
 
-const divAvaliacoes = document.getElementById("divAvaliacoes");
+btnBuscar.onclick = () => {
+    const termo = (inputBuscar.value || '').trim().toLowerCase();
+    if (!termo) return; // não faz nada se vazio
+
+    const filtrados = jogos.filter((u) => u.nome && u.nome.toLowerCase().includes(termo));
+
+    if (filtrados.length === 0) {
+        alert('Jogo não encontrado.');
+        return;
+    }
+
+    // tenta correspondência exata primeiro, senão pega o primeiro resultado
+    const exact = filtrados.find(f => f.nome.toLowerCase() === termo);
+    const escolhido = exact || filtrados[0];
+
+    mostrarDetalhes(escolhido);
+}
+
+
+let divAvaliacoes = document.getElementById("divAvaliacoes");
 
 async function carregarAvaliacoes() {
     try {
@@ -11,7 +32,7 @@ async function carregarAvaliacoes() {
 
         const avaliacoes = dados.avaliacoes;
 
-        mostrarAvaliacoes(avaliacoes.slice(4, 7));
+        mostrarAvaliacoes(avaliacoes.slice(1, 4));
 
     } catch (error) {
         console.error("Erro ao carregar avaliações:", error);
@@ -33,8 +54,7 @@ function mostrarAvaliacoes(lista) {
                 <div class="nomeJogo">
                     <img src="./assets/images/perfilFoto.png" alt="Perfil" width="40px">
                     <div>
-                        <div class="nomeUser">${av.usuario.nome}</div>
-                        <p>${av.jogo || "Jogo não informado"}</p>
+                        <div class="nomeUser">${av.usuario && av.usuario.nome ? av.usuario.nome : 'Usuário'}</div>
                     </div>
                 </div>
 
@@ -87,7 +107,7 @@ async function carregarJogos() {
             jogos = [];
         }
 
-        mostrarJogos(jogos.slice(56, 59));
+        mostrarJogos(jogos.slice(22, 25));
         
     } catch (error) {
 
@@ -159,7 +179,7 @@ function mostrarJogos(lista) {
 }
 
 
-function mostrarDetalhes(jogos) {
+function mostrarDetalhes(jogo) {
     // substitui o conteúdo de <main> por uma página de detalhes
     const main = document.querySelector('main');
     if (!main) return;
@@ -176,7 +196,7 @@ function mostrarDetalhes(jogos) {
         </div>
       <section id="imagem-descricao">
         <section id="image-jogo">
-          <img id="imagemBanner" src="${jogos.imagens}" alt="">
+                <img id="imagemBanner" src="${jogo.imagens}" alt="">
 
           <div id="plataformas">
             <div class="plataforma-icon">
@@ -203,22 +223,22 @@ function mostrarDetalhes(jogos) {
 
         </section>
         <section id="descricao-jogo">
-          <h1>${jogos.nome}</h1>
+          <h1>${jogo.nome}</h1>
           <h2>Descrição</h2>
-          <p>${jogos.descricao}</p>
+          <p>${jogo.descricao}</p>
 
           <div id="informacoes-jogo">
             <div class="info-jogo">
               <h3>Desenvolvedora</h3>
-              <p>${jogos.desenvolvedor}</p>
+              <p>${jogo.desenvolvedor}</p>
             </div>
             <div class="info-jogo">
               <h3>Data de lançamento</h3>
-              <p>${jogos.anoLancamento}</p>
+              <p>${jogo.anoLancamento}</p>
             </div>
             <div class="info-jogo">
               <h3>Gênero</h3>
-              <p>${jogos.genero}</p>
+              <p>${jogo.genero}</p>
             </div>
 
             </div>
@@ -231,6 +251,10 @@ function mostrarDetalhes(jogos) {
     `;
 
     main.innerHTML = detalhesHTML;
+
+    // atualiza referência para a nova div de avaliações e carrega avaliações para a página de detalhes
+    divAvaliacoes = document.getElementById("divAvaliacoes");
+    if (divAvaliacoes) carregarAvaliacoes();
 
     const btnVoltar = document.getElementById('btnVoltar');
     if (btnVoltar) {

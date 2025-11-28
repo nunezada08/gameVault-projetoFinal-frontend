@@ -1,6 +1,7 @@
 const APIJg = "http://localhost:3001/jogos";
 const APIAv = "http://localhost:3001/avaliacoes";
 
+
 let divAvaliacoes = document.getElementById("divAvaliacoes");
 
 async function carregarAvaliacoes() {
@@ -10,7 +11,7 @@ async function carregarAvaliacoes() {
 
         const avaliacoes = dados.avaliacoes;
 
-        mostrarAvaliacoes(avaliacoes.slice(76, 79));
+        mostrarAvaliacoes(avaliacoes.slice(32, 35));
 
     } catch (error) {
         console.error("Erro ao carregar avaliações:", error);
@@ -78,7 +79,7 @@ async function carregarJogos() {
             jogos = [];
         }
 
-        mostrarJogos(jogos.slice(0, 100));
+        mostrarJogos(jogos.filter(j => Number(j.anoLancamento) >= 2000 && Number(j.anoLancamento) <= 2022));
 
     } catch (error) {
       console.error("Erro ao carregar jogos:", error);
@@ -211,6 +212,7 @@ function mostrarDetalhes(jogo) {
 
     divAvaliacoes = document.getElementById("divAvaliacoes");
     if (divAvaliacoes) carregarAvaliacoes();
+
 
     const btnVoltar = document.getElementById('btnVoltar');
     if (btnVoltar) {

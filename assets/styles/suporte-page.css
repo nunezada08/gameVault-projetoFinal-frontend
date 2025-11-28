@@ -42,6 +42,12 @@ header {
       width: 27%;
       gap: 10px;
   }
+
+  #btnBuscar {
+    background-color: #111114 ;
+    border: none;
+    cursor: pointer;
+}
   
   #logoNome img {
       margin-top: 5px;
