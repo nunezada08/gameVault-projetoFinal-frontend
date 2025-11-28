@@ -42,14 +42,6 @@ Onde estão os arquivos principais
 - `assets/images/` — imagens e ícones.
 - `assets/scripts/` — scripts JavaScript que fazem as requisições e renderizam a interface.
 
-Apontar para a API
-
-- A interface consome uma API externa. Para alterar o endpoint, edite as chamadas `fetch` nos arquivos dentro de `assets/scripts/` (procure por `fetch(` ou por uma variável `API_BASE`).
-
-Filtros e navegação
-
-- A UI oferece controles para filtrar por gênero, plataforma e ano; esses filtros são enviados via query string para o endpoint de listagem.
-
 Notas rápidas
 
 - Dados, validações e população dos itens (100+ jogos) são responsabilidade da API hospedada.
