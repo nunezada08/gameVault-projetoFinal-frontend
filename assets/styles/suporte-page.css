@@ -1,27 +1,171 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #111114;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  background-color: #111114;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
+  width: 100%;
+  height: 68px;
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+  padding: 0 5%;
+  gap: 24px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+#logoNome {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 0;
+  font-size: 12px;
+  gap: 10px;
+}
+
+#logoNome img {
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+#perfilMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-right: 0;
+}
+
+#sunoco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-left: 0;
+}
+
+.sunocoText:hover {
+  cursor: pointer;
+}
+
+#input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #11111446;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 200px;
+  height: 35px;
+  margin-left: 0;
+}
+
+#input input {
+  color: rgb(154, 156, 162);
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  width: 100%;
+  padding-left: 2px;
+  margin-left: 15px;
+}
+
+#input img {
+  margin-right: 12px;
+  margin-top: 0;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  display: block;
+}
+
+.container {
+    max-width: 980px;
     width: 100%;
-    height: 68px;
-    background-color: #171717;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+#help-title {
+    margin-top: 96px;
+    width: 100%;
+}
+
+#help-title h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: white;
+}
+
+#self-service {
+    margin-top: 48px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#service-inner {
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+#service-inner h2 {
+    font-size: 0.95rem;
+    margin: 0 0 18px 0;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: left;
+}
+
+#service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    width: 100%;
+}
+
+.service-btn {
+    padding: 20px 28px;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #292929;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
+    text-align: center;
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     justify-content: space-between;
     color: rgb(255, 255, 255);
     padding: 0 5%;
@@ -106,6 +250,88 @@ header {
       margin-right: 15px;
       
   }
+=======
+    justify-content: center;
+    min-height: 92px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.service-btn:hover {
+    transform: translateY(-5px);
+}
+
+.service-btn.purple {
+    background-color: #694a58;
+}
+
+.service-btn.purple:hover {
+    background-color: #5b3d4a;
+}
+
+.service-btn.brown {
+    background-color: #6e6648;
+}
+
+.service-btn.brown:hover {
+    background-color: #5c533f;
+}
+
+.service-btn.teal {
+    background-color: #355655;
+}
+
+.service-btn.teal:hover {
+    background-color: #2d4b4b;
+}
+
+.service-btn.green {
+    background-color: #2f6b3b;
+}
+
+.service-btn.green:hover {
+    background-color: #275a33;
+}
+
+#contact {
+    margin-top: 64px;
+    margin-bottom: 96px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 1.05rem;
+    margin-bottom: 22px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+#contact-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: transparent;
+    transition: transform 0.18s ease;
+}
+
+#contact-icons a img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+#contact-icons a:hover {
+    transform: translateY(-5px);
+}
+>>>>>>> 18f0a74e9c067aedd9e0b1f29ccbc6812afc77dd
 
 footer {
     width: 100%;
@@ -142,82 +368,54 @@ footer {
     gap: 5px;
 }
 
-main{ width:100%; display:flex; align-items:center; justify-content:center; flex-direction:column; padding:0 3% }
+@media (max-width: 768px) {
+    #service-grid {
+        grid-template-columns: 1fr;
+    }
 
-.help-title{ margin-top:96px; width:100%; }
-.help-title h1{ font-size:2.6rem; font-weight:700; letter-spacing:0.3px; text-align:center; color: white; }
+    #help-title h1 {
+        font-size: 1.6rem;
+    }
 
-.self-service{ margin-top:48px; width:100%; display:flex; flex-direction:column; align-items:center }
+    #self-service h2,
+    #contact h2 {
+        font-size: 1.2rem;
+    }
 
-.service-inner{ max-width:760px; width:100%; margin:0 auto; display:block }
-.service-inner h2{ font-size:0.95rem; margin:0 0 18px 0; font-weight:500; color:rgba(255,255,255,0.85); text-align:left }
+    #input {
+        display: none;
+    }
 
-.service-grid{ display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:28px; width:100% }
-
-.service-btn{
-    padding:20px 28px;
-    border:none;
-    border-radius:16px;
-    color:white;
-    font-size:15px;
-    cursor:pointer;
-    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
-    background-color: #292929;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
-    text-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:92px;
+    #sunoco {
+        gap: 18px;
+    }
 }
 
-.service-btn:hover{ transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,0.5) }
+@media (max-width: 480px) {
+    header {
+        padding: 0 2%;
+    }
 
-.service-btn.purple{ background-color: #694a58 }
-.service-btn.purple:hover{ background-color: #5b3d4a }
-.service-btn.brown{ background-color: #6e6648 }
-.service-btn.brown:hover{ background-color: #5c533f }
-.service-btn.teal{ background-color: #355655 }
-.service-btn.teal:hover{ background-color: #2d4b4b }
-.service-btn.green{ background-color: #2f6b3b }
-.service-btn.green:hover{ background-color: #275a33 }
+    #sunoco {
+        gap: 20px;
+    }
 
-.contact{ margin-top:64px; margin-bottom:96px; text-align:center }
-.contact h2{ font-size:1.05rem; margin-bottom:22px; font-weight:500; color:rgba(255,255,255,0.85) }
+    #contact-icons {
+        gap: 12px;
+    }
 
-.contact-icons{ display:flex; justify-content:center; gap:28px }
-.contact-icons a{ display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; background:transparent }
-.contact-icons a img, .contact-icons a svg{ transition: transform .18s ease; width:36px; height:36px; object-fit:contain }
-.contact-icons a:hover{ transform:translateY(-6px) }
+    #contact {
+        margin-bottom: 48px;
+    }
 
-.btn-circle{ width:55px; height:55px; border-radius:50%; border:none; background-color:var(--btn-dark); display:flex; align-items:center; justify-content:center; cursor:pointer }
-.btn-circle:hover{ transform:translateY(-4px) }
+    .service-btn {
+        min-height: 72px;
+        padding-left: 20px;
+    }
 
-@media (max-width: 768px){
-    .service-grid{ grid-template-columns: 1fr }
-    .help-title h1{ font-size:1.6rem }
-    .self-service h2, .contact h2{ font-size:1.2rem }
-}
-
-@media (max-width:480px){
-    header{ padding:0 2% }
-    #sunoco{ gap:20px }
-    .contact-icons{ gap:12px }
-    .contact{ margin-bottom:48px }
-}
-
-@media (max-width: 768px){
-    #input{ display:none }
-    #sunoco{ gap:18px }
-}
-
-.service-btn:focus{ outline: 3px solid rgba(7,131,214,0.18); outline-offset: 3px }
-
-.container{ max-width:980px; width:100%; padding:0 20px; margin:0 auto }
-
-@media (max-width:480px){
-    .service-btn{ min-height:72px; padding-left:20px }
-    .help-title h1{ font-size:1.4rem }
+    #help-title h1 {
+        font-size: 1.4rem;
+    }
 }
 
 #mobileMenu {
@@ -229,7 +427,7 @@ main{ width:100%; display:flex; align-items:center; justify-content:center; flex
     background-color: #171717;
     width: 200px;
     padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
 
