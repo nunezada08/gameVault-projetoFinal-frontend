@@ -15,25 +15,6 @@ git clone https://github.com/nunezada08/gameVault-projetoFinal-frontend.git
 cd gameVault-projetoFinal-frontend
 ```
 
-Executar localmente
-
-- Você pode abrir `index.html` diretamente no navegador.
-- Para evitar problemas com `fetch`/CORS e para desenvolvimento, execute um servidor local:
-
-```bash
-# VS Code: instale a extensão Live Server e clique em "Go Live".
-
-# Node.js (http-server)
-npm install
-http-server -p 5500
-
-# Ou use o pacote `serve` (simples e leve)
-npm install -g serve
-serve -p 5500
-
-# Depois abra: http://localhost:5500
-```
-
 Onde estão os arquivos principais
 
 - `index.html` — página principal com a listagem de jogos.
