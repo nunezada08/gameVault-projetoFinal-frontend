@@ -301,7 +301,7 @@ const btnFrente = document.getElementById("btnFrente");
 const imagens = [
     "./assets/images/cod.jpg",
     "./assets/images/snoopy.png",
-    "./assets/images/nba2k.jpeg",
+    "./assets/images/doom-the-dark-ages.jpg",
     "./assets/images/silksong.jpg",
 ];
 
