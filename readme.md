@@ -18,7 +18,7 @@ cd gameVault-projetoFinal-frontend
 Onde estão os arquivos principais
 
 - `index.html` — página principal com a listagem de jogos.
-- `pages/` — páginas secundárias (detalhes, filtros, login, etc.).
+- `pages/` — páginas secundárias (detalhes, filtros, etc.).
 - `assets/styles/` — arquivos CSS organizados por página.
 - `assets/images/` — imagens e ícones.
 - `assets/scripts/` — scripts JavaScript que fazem as requisições e renderizam a interface.
