@@ -171,7 +171,9 @@ main {
     text-align: center;
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
+
   
   #logoNome a {
       color: white;
