@@ -347,6 +347,10 @@ main {
     outline: none;
 }
 
+.game-title{
+    color: white;
+}
+
 .filtrosJogos {
     display: flex;
     justify-content: center;
