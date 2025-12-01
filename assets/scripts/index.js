@@ -402,9 +402,6 @@ window.addEventListener("resize", () => {
     renderGeneroSlides();
 });
 
-btnFrente3.addEventListener("click", nextGenero);
-btnTras3.addEventListener("click", prevGenero);
-
 
 
 
