@@ -573,6 +573,39 @@ footer {
     #banner #imagem { width: 900px; height: 490px; }
     .slide { width: 330px }
     .slideGenero { width: 190px; height: 311px ;}
+    .carousel-viewport img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    object-position: center;
+    margin-left: 40px;
+    }
+    .game-title{
+        margin-left: 40px;
+    }
+    .filtrosJogos {
+    width: 203px;
+    height: 325px;
+}
+    #divGeneroJogos section {
+    width: 203px;
+    height: 325px;
+
+}
+#divGeneroJogos {
+    width: 100%;
+    margin-top: 40px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+
+
+
 }
 
 @media (max-width: 1030px) {

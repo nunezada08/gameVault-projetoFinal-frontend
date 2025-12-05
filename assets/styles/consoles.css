@@ -229,3 +229,10 @@ footer {
     flex-direction: column;
     background-color: #171717;
 }
+
+@media (max-width: 1366px) {
+    .game-image {
+    width: 325px;    
+    max-width: 325px;
+}
+}

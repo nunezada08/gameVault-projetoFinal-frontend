@@ -220,6 +220,14 @@ footer {
     background-color: #171717;
 }
 
+@media (max-width: 1366px) {
+    .game-image {
+    width: 325px;    
+    max-width: 325px;
+}
+
+}
+
 @media (max-width: 1200px) {
     #todosOsJogos { padding: 0 8%; gap: 36px }
     .games-list { gap: 28px }

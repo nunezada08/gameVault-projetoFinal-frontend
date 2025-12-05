@@ -218,3 +218,12 @@ hr {
     align-items: center;
     display: flex;
 }
+
+@media (max-width: 1366px) {
+    #image-jogo img {
+    width: 98%;    
+    max-width: 98%;
+    height: 400px;
+    margin-bottom: 125px;
+}
+}
