@@ -174,29 +174,6 @@ function mostrarDetalhes(jogo) {
         <section id="image-jogo">
                 <img id="imagemBanner" src="${jogo.imagens}" alt="">
 
-          <div id="plataformas">
-            <div class="plataforma-icon">
-              <img src="../assets/images/logoPlaystation.png" alt="">
-            </div>
-
-            <div class="plataforma-icon">
-              <img src="../assets/images/logoXbox.png" alt="">
-            </div>
-
-            <div class="plataforma-icon">
-              <img src="../assets/images/logoSteam.png" alt="">
-            </div>
-
-            <div id="avaliacao">
-              <p>4,5</p>
-              <img src="../assets/images/estrela.png" alt="">
-              <img src="../assets/images/estrela.png" alt="">
-              <img src="../assets/images/estrela.png" alt="">
-              <img src="../assets/images/estrela.png" alt="">
-            </div>
-          </div>
-
-
         </section>
         <section id="descricao-jogo">
           <h1>${jogo.nome}</h1>

@@ -172,8 +172,6 @@ function mostrarDetalhes(jogo) {
       <section id="imagem-descricao">
         <section id="image-jogo">
                 <img id="imagemBanner" src="${jogo.imagens}" alt="">
-
-
         </section>
         <section id="descricao-jogo">
           <h1>${jogo.nome}</h1>
