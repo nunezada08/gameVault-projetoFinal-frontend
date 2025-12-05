@@ -104,9 +104,9 @@ header {
   
 #imagem {
     width: 395px;
-    height: 220px;
+    height: 205px;
     max-width: 395px;
-    max-height: 220px;
+    max-height: 205px;
     border-radius: 20px;
     object-fit: cover;
     object-position: center center;
