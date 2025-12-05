@@ -206,6 +206,8 @@ function mostrarDetalhes(jogo) {
     divAvaliacoes = document.getElementById("divAvaliacoes");
     if (divAvaliacoes) carregarAvaliacoes();
 
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     const btnVoltar = document.getElementById('btnVoltar');
     if (btnVoltar) {
         btnVoltar.addEventListener('click', () => {

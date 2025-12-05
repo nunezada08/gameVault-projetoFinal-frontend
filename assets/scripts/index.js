@@ -230,9 +230,10 @@ function mostrarDetalhes(jogo) {
 
     main.innerHTML = detalhesHTML;
 
-    // atualiza referência para a nova div de avaliações e carrega avaliações para a página de detalhes
     divAvaliacoes = document.getElementById("divAvaliacoes");
     if (divAvaliacoes) carregarAvaliacoes();
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
     const btnVoltar = document.getElementById('btnVoltar');
     if (btnVoltar) {
