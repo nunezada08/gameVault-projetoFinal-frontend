@@ -145,10 +145,8 @@ header {
 }
 
 .game-image {
-    width: 346px;
-    height: 231px;
-    max-width: 346px;
-    max-height: 231px;
+    width: 395px;    
+    max-width: 395px;
     border-radius: 20px;
     object-fit: cover;
     object-position: center center;

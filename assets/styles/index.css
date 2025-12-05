@@ -184,8 +184,8 @@ main {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px;
-    height: 230px;
+    margin-top: 40px;
+    height: 280px;
     border-bottom: 2px solid rgba(255,255,255,0.06);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -262,8 +262,7 @@ main {
 }
 
 .slide-card img {
-    width: 330px;
-    height: 190px;
+    width: 390px;
     border-radius: 20px;
     object-fit: cover;
     object-position: center center;

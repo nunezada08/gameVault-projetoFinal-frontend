@@ -34,6 +34,9 @@ main {
   align-items: center;
   justify-content: center;
   margin-top: 1px;
+  width: 100%;
+  min-height: calc(100vh - 148px);
+  padding-bottom: 20px;
 }
 
 #logoNome {

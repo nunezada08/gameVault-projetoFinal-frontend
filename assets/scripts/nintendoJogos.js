@@ -97,7 +97,7 @@ async function carregarJogos() {
             jogos = [];
         }
 
-        mostrarJogos(jogos.filter(j => (j.genero) >= 'RPG' && (j.genero) <= 'RPG'));
+        mostrarJogos(jogos.filter(j => (j.plataforma) >= 'nintendo' && (j.plataforma) <= 'nintendo'));
 
     } catch (error) {
       console.error("Erro ao carregar jogos:", error);
@@ -173,6 +173,7 @@ function mostrarDetalhes(jogo) {
       <section id="imagem-descricao">
         <section id="image-jogo">
                 <img id="imagemBanner" src="${jogo.imagens}" alt="">
+
 
 
         </section>
